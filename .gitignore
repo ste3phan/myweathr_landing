@@ -26,6 +26,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# Supabase migrations with secrets
+supabase/migrations/
+
 # Vercel
 .vercel
 

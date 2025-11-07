@@ -20,29 +20,25 @@ export default async function handler(req, res) {
     const supabase = createClient(supabaseUrl, supabaseServiceKey)
 
     // Check if email already exists
-    const { data: existingSubscriber, error: checkError } = await supabase
-      .from('newsletter_subscribers')
+    const { data: existingSubscriber } = await supabase
+      .from('waitlist')
       .select('email')
       .eq('email', email.toLowerCase())
       .single()
 
     if (existingSubscriber) {
       return res.status(400).json({ 
-        message: "This email is already subscribed!" 
+        message: "This email is already on the waitlist!" 
       });
     }
 
     // Insert new subscriber
+    // Note: Database trigger will automatically send confirmation email via pg_net
     const { data, error } = await supabase
-      .from('newsletter_subscribers')
-      .insert([
-        { 
-          email: email.toLowerCase(),
-          subscribed_at: new Date().toISOString(),
-          status: 'pending' // For double opt-in
-        }
-      ])
+      .from('waitlist')
+      .insert([{ email: email.toLowerCase() }])
       .select()
+      .single()
 
     if (error) {
       console.error("Supabase error:", error);
@@ -52,7 +48,7 @@ export default async function handler(req, res) {
     console.log("Newsletter signup:", email);
 
     return res.status(200).json({ 
-      message: "Thanks! You're now on the waitlist for early access." 
+      message: "Thanks! Please check your email to confirm your signup." 
     });
   } catch (error) {
     console.error("Newsletter error:", error);
