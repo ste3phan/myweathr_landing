@@ -88,8 +88,8 @@ export default function LandingPage() {
                 {[
                   'Route-specific weather forecasts',
                   'Wind analysis for your direction',
-                  'Connect Strava',
-                  'Plan your perfect ride'
+                  'Intelligent Multi-Source Forecasting',
+                  'Connect Strava & Plan your perfect ride'
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="flex-shrink-0 w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center">
