@@ -1,5 +1,5 @@
 // pages/index.js
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 
 export default function LandingPage() {
@@ -7,6 +7,21 @@ export default function LandingPage() {
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
   const [consentChecked, setConsentChecked] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const images = [
+    "/frame1.png",
+    "/frame2.png",
+    "/frame3.png"
+  ];
+
+  // Auto-rotate images every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -156,22 +171,46 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Right Column - iPhone Mockup */}
+            {/* Right Column - iPhone Mockup with Slider */}
             <div className="relative lg:flex hidden items-center justify-center">
               <div className="relative">
                 {/* Glow effect behind iPhone */}
                 <div className="absolute inset-0 bg-gradient-to-br from-sky-400/20 to-blue-400/20 blur-3xl rounded-full scale-110" />
                 
-                {/* iPhone - Much larger now */}
-                <div className="relative z-10 transform hover:scale-[1.02] transition-transform duration-500">
-                  <img
-                    src="/iphone-mockup.png"
-                    alt="MyWeathr App"
-                    className="w-full max-w-lg mx-auto"
-                    style={{
-                      filter: 'drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3))'
-                    }}
-                  />
+                {/* iPhone Slider */}
+                <div className="relative z-10">
+                  <div className="relative w-full max-w-lg mx-auto">
+                    {/* Images */}
+                    {images.map((src, index) => (
+                      <img
+                        key={src}
+                        src={src}
+                        alt={`MyWeathr App - Screen ${index + 1}`}
+                        className={`w-full transition-opacity duration-700 ${
+                          index === currentImageIndex ? 'opacity-100' : 'opacity-0 absolute inset-0'
+                        }`}
+                        style={{
+                          filter: 'drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3))'
+                        }}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Dot Navigation */}
+                  <div className="flex justify-center gap-2 mt-6">
+                    {images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                          index === currentImageIndex 
+                            ? 'bg-sky-600 w-8' 
+                            : 'bg-slate-300 hover:bg-slate-400'
+                        }`}
+                        aria-label={`View screenshot ${index + 1}`}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
               
@@ -182,8 +221,21 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Coffee Button */}
+        <div className="mt-12 sm:mt-16 flex justify-center px-4">
+          <a
+            href="https://www.paypal.com/paypalme/StephanLindauerDev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+          >
+            <span className="text-2xl group-hover:animate-bounce">☕️</span>
+            <span>Hard Work, Harder Coffee</span>
+          </a>
+        </div>
+
         {/* Footer */}
-        <footer className="mt-12 sm:mt-20 py-8 sm:py-10 text-center text-xs sm:text-sm text-slate-500 px-4">
+        <footer className="mt-8 sm:mt-12 py-8 sm:py-10 text-center text-xs sm:text-sm text-slate-500 px-4">
           © {new Date().getFullYear()} myweathr.io · built by{" "}
           <a href="https://stephan-lindauer.de" className="hover:text-sky-600 transition-colors">
             Stephan Lindauer
