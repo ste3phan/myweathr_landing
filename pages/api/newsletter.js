@@ -15,6 +15,12 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: "Please provide a valid email address" });
   }
 
+  // Get user's IP address
+  const consentIp = req.headers['x-forwarded-for']?.split(',')[0] || 
+                    req.headers['x-real-ip'] || 
+                    req.socket.remoteAddress || 
+                    null;
+
   try {
     // Initialize Supabase client with service role key for server-side operations
     const supabase = createClient(supabaseUrl, supabaseServiceKey)
@@ -32,11 +38,15 @@ export default async function handler(req, res) {
       });
     }
 
-    // Insert new subscriber
+    // Insert new subscriber with consent IP and timestamp
     // Note: Database trigger will automatically send confirmation email via pg_net
     const { data, error } = await supabase
       .from('waitlist')
-      .insert([{ email: email.toLowerCase() }])
+      .insert([{ 
+        email: email.toLowerCase(),
+        consent_ip: consentIp,
+        // created_at is automatically set by database default
+      }])
       .select()
       .single()
 

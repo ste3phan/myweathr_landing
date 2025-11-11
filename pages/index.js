@@ -6,6 +6,7 @@ export default function LandingPage() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [consentChecked, setConsentChecked] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -89,13 +90,16 @@ export default function LandingPage() {
               {/* Email Signup */}
               <div className="space-y-4">
                 {status?.type === "success" ? (
-                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 space-y-2">
                     <div className="flex items-center gap-2 text-green-800">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       <p className="font-medium">{status.message}</p>
                     </div>
+                    <p className="text-sm text-green-700 pl-7">
+                      Please check your inbox (and spam folder) to confirm your signup.
+                    </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-3">
@@ -111,8 +115,8 @@ export default function LandingPage() {
                       />
                       <button
                         type="submit"
-                        disabled={loading}
-                        className="px-6 py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold transition-all disabled:opacity-50 whitespace-nowrap flex items-center gap-2 justify-center"
+                        disabled={loading || !consentChecked}
+                        className="px-6 py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap flex items-center gap-2 justify-center"
                       >
                         {loading ? "Joining..." : "Join Waitlist"}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,12 +124,33 @@ export default function LandingPage() {
                         </svg>
                       </button>
                     </div>
+                    
+                    {/* DSGVO Consent Checkbox */}
+                    <div className="flex items-start gap-3 pt-2">
+                      <input
+                        type="checkbox"
+                        id="consent"
+                        checked={consentChecked}
+                        onChange={(e) => setConsentChecked(e.target.checked)}
+                        className="mt-1 w-4 h-4 text-sky-600 border-slate-300 rounded focus:ring-sky-500 focus:ring-2 cursor-pointer"
+                      />
+                      <label htmlFor="consent" className="text-xs text-slate-600 leading-relaxed cursor-pointer">
+                        I have read the{" "}
+                        <a 
+                          href="/privacy" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sky-600 hover:text-sky-700 underline"
+                        >
+                          Privacy Policy
+                        </a>
+                        {" "}and agree to be notified once by email as soon as <strong>myweathr.io</strong> goes live. Consent can be withdrawn at any time.
+                      </label>
+                    </div>
+
                     {status?.type === "error" && (
                       <p className="text-red-600 text-sm">{status.message}</p>
                     )}
-                    <p className="text-xs text-slate-500">
-                      Be the first to know when we launch. No spam, ever.
-                    </p>
                   </form>
                 )}
               </div>
@@ -162,6 +187,10 @@ export default function LandingPage() {
           © {new Date().getFullYear()} myweathr.io · built by{" "}
           <a href="https://stephan-lindauer.de" className="hover:text-sky-600 transition-colors">
             Stephan Lindauer
+          </a>{" "}
+          ·{" "}
+          <a href="/imprint" className="underline hover:text-sky-600">
+            Imprint
           </a>{" "}
           ·{" "}
           <a href="/terms" className="underline hover:text-sky-600">

@@ -51,7 +51,7 @@ export default function ConfirmedPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sky-600 mt-0.5">→</span>
-                <span>No spam, just important updates</span>
+                <span>No spam, just the single launch notification</span>
               </li>
             </ul>
           </div>

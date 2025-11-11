@@ -14,18 +14,25 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Missing confirmation token" });
   }
 
+  // Get user's IP address
+  const confirmedIp = req.headers['x-forwarded-for']?.split(',')[0] || 
+                      req.headers['x-real-ip'] || 
+                      req.socket.remoteAddress || 
+                      null;
+
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
     process.env.SUPABASE_SERVICE_ROLE_KEY
   );
 
   try {
-    // Update waitlist entry
+    // Update waitlist entry with confirmation and IP
     const { data, error } = await supabase
       .from("waitlist")
       .update({ 
         confirmed: true, 
-        confirmed_at: new Date().toISOString() 
+        confirmed_at: new Date().toISOString(),
+        confirmed_ip: confirmedIp
       })
       .eq("confirmation_token", token)
       .eq("confirmed", false)
@@ -37,11 +44,17 @@ export default async function handler(req, res) {
     }
 
     if (!data || data.length === 0) {
-      return res.status(400).json({ error: "Invalid or expired token" });
+      return res.status(400).json({ 
+        success: false,
+        message: "Invalid or expired confirmation link. Please try signing up again." 
+      });
     }
 
-    // Redirect to success page
-    return res.redirect(302, "/confirmed");
+    // Return success response
+    return res.status(200).json({ 
+      success: true,
+      message: "Your email has been confirmed! Welcome to the MyWeathr waitlist." 
+    });
   } catch (error) {
     console.error("Confirmation error:", error);
     return res.status(500).json({ error: "Internal server error" });
