@@ -38,7 +38,7 @@ export default function ConfirmPage() {
   return (
     <>
       <Head>
-        <title>Confirm Email - MyWeathr</title>
+        <title>Confirm Email - myweathr.io</title>
         <link rel="icon" type="image/png" href="/logo-app.png" />
       </Head>
 

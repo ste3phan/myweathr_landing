@@ -26,7 +26,7 @@ export default function ConfirmedPage() {
             You're on the list! 🎉
           </h1>
           <p className="text-lg text-slate-600 mb-8">
-            Thanks for confirming your email. We'll notify you as soon as MyWeathr launches.
+            Thanks for confirming your email. We'll notify you as soon as myweathr launches.
           </p>
 
           {/* CTA */}
