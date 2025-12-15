@@ -245,12 +245,20 @@ export default function LandingPage() {
             Imprint
           </a>{" "}
           ·{" "}
+          <a href="/terms-waitlist" className="underline hover:text-sky-600">
+            Terms (Waitlist)
+          </a>{" "}
+          ·{" "}
+          <a href="/privacy-waitlist" className="underline hover:text-sky-600">
+            Privacy (Waitlist)
+          </a>{" "}
+          ·{" "}
           <a href="/terms" className="underline hover:text-sky-600">
-            Terms
+            Terms (App)
           </a>{" "}
           ·{" "}
           <a href="/privacy" className="underline hover:text-sky-600">
-            Privacy
+            Privacy (App)
           </a>
         </footer>
       </main>
