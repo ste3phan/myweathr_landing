@@ -46,11 +46,11 @@ export default function Privacy() {
                 <li><strong>Email/Password</strong>: We store your email and encrypted password</li>
               </ul>
 
-              <h3 className="text-xl font-medium mb-2 mt-4">2.3 Route and Activity Data</h3>
+              <h3 className="text-xl font-medium mb-2 mt-4">2.3 Route Data</h3>
               <p className="text-slate-700 leading-relaxed">When you use our Service, we collect:</p>
               <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1">
                 <li><strong>GPX route data</strong> (uploaded routes with GPS coordinates)</li>
-                <li><strong>Strava activities</strong> (if you connect your Strava account)</li>
+                <li><strong>Strava routes</strong> (planned routes if you connect your Strava account)</li>
                 <li><strong>Komoot routes</strong> (if you import from Komoot)</li>
                 <li><strong>Route metadata</strong> (name, distance, elevation, activity type, sport type)</li>
               </ul>
@@ -145,15 +145,15 @@ export default function Privacy() {
 
               <h3 className="text-xl font-medium mb-2 mt-4">4.4 Strava (Optional Integration)</h3>
               <p className="text-slate-700 leading-relaxed">
-                If connected, we access your public activities. You can disconnect at any time in Settings.<br />
+                If connected, we access your planned routes (not activities). You can disconnect at any time in Settings.<br />
                 Privacy Policy: <a href="https://www.strava.com/legal/privacy" className="text-sky-600 hover:text-sky-700 underline">https://www.strava.com/legal/privacy</a>
               </p>
 
               <h3 className="text-xl font-medium mb-2 mt-4">4.5 Weather Data Providers</h3>
               <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1">
-                <li><strong>Open-Meteo</strong>: Provides weather forecasts for international routes (no personal data shared)</li>
+                <li><strong>Apple WeatherKit</strong>: Primary weather data provider (no personal data shared)</li>
                 <li><strong>Brightsky / DWD (Deutscher Wetterdienst)</strong>: Provides weather data for routes in Germany (no personal data shared)</li>
-                <li><strong>Apple WeatherKit</strong>: Provides weather data as fallback (no personal data shared)</li>
+                <li><strong>Open-Meteo</strong>: Fallback weather data provider (no personal data shared)</li>
               </ul>
 
               <h3 className="text-xl font-medium mb-2 mt-4">4.6 Sunrise-Sunset.org</h3>
