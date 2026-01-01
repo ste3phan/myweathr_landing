@@ -7,7 +7,7 @@ export default function VersionHistorySection() {
   const versions = [
     {
       version: "1.1.1",
-      date: "January 2026",
+      date: "December 2025",
       features: [
         "Password Reset Feature: Implemented a secure password reset flow with deep link handling, allowing users to easily reset their password directly within the app",
         "Coffee Stop Input Improvements: Enhanced the coffee stop duration input field to provide a better user experience when adding or editing stops",

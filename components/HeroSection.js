@@ -73,7 +73,7 @@ export default function HeroSection() {
           </div>
 
           <p className="text-sm text-slate-500">
-            Version 1.1.0 now available for iOS
+            Version 1.1.1 now available for iOS
           </p>
         </div>
 
