@@ -38,9 +38,10 @@ export default function HeroSection() {
           <div className="space-y-3">
             {[
               'Route-specific weather forecasts',
-              'Wind analysis for your direction',
+              'Echelon Analysis — pro-style wind tactics (Pro)',
+              'Apparent wind & Tailwind Score',
               'Intelligent Multi-Source Forecasting',
-              'Connect Strava & Plan your perfect ride'
+              'Connect Strava & Komoot'
             ].map((feature, index) => (
               <div key={index} className="flex items-center gap-3">
                 <div className="flex-shrink-0 w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center">
@@ -53,8 +54,8 @@ export default function HeroSection() {
             ))}
           </div>
 
-          {/* App Store Button */}
-          <div>
+          {/* CTAs: App Store + Web App */}
+          <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="https://apps.apple.com/app/myweathr-io/id6755927323"
               target="_blank"
@@ -70,10 +71,25 @@ export default function HeroSection() {
                 <div className="text-xl font-semibold -mt-1">App Store</div>
               </div>
             </a>
+            <a
+              href="https://app.myweathr.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-sky-600 text-white font-medium rounded-lg hover:bg-sky-500 transition-colors"
+            >
+              <svg className="w-7 h-7 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18M12 3a15 15 0 000 18" />
+              </svg>
+              <div className="text-left">
+                <div className="text-xs">Open the</div>
+                <div className="text-xl font-semibold -mt-1">Web App</div>
+              </div>
+            </a>
           </div>
 
           <p className="text-sm text-slate-500">
-            Version 1.1.1 now available for iOS
+            Version 1.2.3 — available on iOS &amp; Web
           </p>
         </div>
 

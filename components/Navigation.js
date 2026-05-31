@@ -25,11 +25,25 @@ export default function Navigation() {
           >
             Version History
           </a>
-          <a 
-            href="#roadmap" 
+          <a
+            href="#roadmap"
             className="hidden sm:block text-slate-600 hover:text-sky-600 transition-colors"
           >
             Roadmap
+          </a>
+          <a
+            href="#faq"
+            className="hidden sm:block text-slate-600 hover:text-sky-600 transition-colors"
+          >
+            FAQ
+          </a>
+          <a
+            href="https://app.myweathr.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex px-4 py-2 border border-sky-600 text-sky-700 hover:bg-sky-50 font-medium rounded-lg transition-colors items-center gap-2"
+          >
+            Web App
           </a>
           <a
             href="https://apps.apple.com/app/myweathr-io/id6755927323"

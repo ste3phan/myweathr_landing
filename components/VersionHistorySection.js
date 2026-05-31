@@ -2,9 +2,34 @@ import React, { useState } from 'react';
 
 export default function VersionHistorySection() {
   // State to track which versions are expanded
-  const [expandedVersions, setExpandedVersions] = useState({ '1.1.1': true });
+  const [expandedVersions, setExpandedVersions] = useState({ '1.2.3': true });
 
   const versions = [
+    {
+      version: "1.2.3",
+      date: "May 2026",
+      features: [
+        "Echelon Analysis (Beta) — new Premium feature for pro-style wind tactics: sector-by-sector crosswind risk with surface-aware physics (CORINE/OSM land use cascading)",
+        "Apparent Wind (Scheinwind) with terrain-aware correction — see what you really feel on the bike, not just what the forecast says",
+        "Wind Flow Map: visualize tailwind, headwind, and crosswind sections directly on the route with clickable segments",
+        "Tailwind Score: a single 0–100 number that summarizes how friendly the wind will be for your ride, with spectrum bar",
+        "Precipitation probability now terrain-aware everywhere, with realistic peak gusts in summaries",
+        "Major performance gains: faster Plan Ride, shared cross-user roughness cache, smoother initial render",
+        "Polished dark mode across Echelon, share view, and weather charts"
+      ]
+    },
+    {
+      version: "1.1.2",
+      date: "March 2026",
+      features: [
+        "Sign in with Google and Apple on iOS, Android, and Web",
+        "Web App billing via Stripe (RevenueCat Web Billing) — full Premium experience now also on app.myweathr.io",
+        "Dedicated email confirmation screen for a clearer sign-up flow",
+        "Wind height correction: forecasts adjusted from 10 m measurement to 1.5 m cyclist level for realistic on-bike wind",
+        "Real wind gust data integrated from all weather providers",
+        "Improved precision for Apple WeatherKit wind, humidity, and cloud cover"
+      ]
+    },
     {
       version: "1.1.1",
       date: "December 2025",

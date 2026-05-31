@@ -20,14 +20,27 @@ export default function Footer() {
               The intelligent weather app designed specifically for cyclists and outdoor athletes.
               Get precise route-specific forecasts and make better decisions.
             </p>
-            <a
-              href="https://apps.apple.com/app/myweathr-io/id6755927323"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white font-medium rounded-lg transition-colors"
-            >
-              Download on App Store
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://apps.apple.com/app/myweathr-io/id6755927323"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white font-medium rounded-lg transition-colors"
+              >
+                Download on App Store
+              </a>
+              <a
+                href="https://app.myweathr.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 border border-slate-600 hover:border-sky-500 hover:text-sky-300 text-white font-medium rounded-lg transition-colors"
+              >
+                Open Web App
+              </a>
+            </div>
+            <p className="text-slate-500 text-sm mt-4">
+              Available on iOS &amp; Web · Android coming soon
+            </p>
           </div>
           
           {/* Links */}
@@ -47,6 +60,16 @@ export default function Footer() {
               <li>
                 <a href="#roadmap" className="text-slate-400 hover:text-white transition-colors">
                   Roadmap
+                </a>
+              </li>
+              <li>
+                <a href="#faq" className="text-slate-400 hover:text-white transition-colors">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="https://app.myweathr.io" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                  Web App
                 </a>
               </li>
             </ul>
