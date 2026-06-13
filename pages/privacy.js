@@ -17,7 +17,7 @@ export default function Privacy() {
           </Link>
           
           <h1 className="text-3xl sm:text-4xl font-bold mb-4">Privacy Policy for myweathr.io</h1>
-          <p className="text-slate-600 mb-8">Last Updated: December 2025</p>
+          <p className="text-slate-600 mb-8">Last Updated: June 2026</p>
           
           <div className="prose prose-slate max-w-none space-y-8">
 
@@ -43,6 +43,7 @@ export default function Privacy() {
               <p className="text-slate-700 leading-relaxed">We support the following sign-in methods:</p>
               <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1">
                 <li><strong>Apple Sign-In</strong>: We receive your Apple ID email (or relay email)</li>
+                <li><strong>Google Sign-In</strong>: We receive your Google account email and basic profile information (name, profile picture, where provided)</li>
                 <li><strong>Email/Password</strong>: We store your email and encrypted password</li>
               </ul>
 
@@ -89,7 +90,7 @@ export default function Privacy() {
                 <li>RevenueCat user ID (for subscription management)</li>
               </ul>
               <p className="text-slate-700 leading-relaxed mt-3">
-                <strong>Note:</strong> We do not store payment card details. All payments are processed securely by Apple (App Store) or Stripe.
+                <strong>Note:</strong> We do not store payment card details. iOS in-app purchases are processed by Apple via the App Store. Web subscriptions are processed by Stripe Payments Europe Ltd. through RevenueCat Web Billing. We only receive subscription status and identifiers from these processors.
               </p>
 
               <h3 className="text-xl font-medium mb-2 mt-4">2.8 Weather Data Requests</h3>
@@ -106,6 +107,21 @@ export default function Privacy() {
                 <li>App version</li>
                 <li>Error logs (for debugging purposes)</li>
               </ul>
+
+              <h3 className="text-xl font-medium mb-2 mt-4">2.10 Tour Plans &amp; Email Reminders</h3>
+              <p className="text-slate-700 leading-relaxed">
+                If you save a planned ride (a "Tour Plan"), we store:
+              </p>
+              <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1">
+                <li>The route reference, planned date, start time, average speed, and direction (forward/reversed)</li>
+                <li>Your per-tour reminder preference (whether a reminder is enabled for that specific tour)</li>
+                <li>Your master reminder preference on your profile and the timestamp of your consent, kept as proof of opt-in under GDPR</li>
+                <li>A unique unsubscribe token tied to your profile so you can opt out without signing in</li>
+                <li>The timestamp when a reminder for a given tour was sent, used to prevent duplicate emails</li>
+              </ul>
+              <p className="text-slate-700 leading-relaxed mt-3">
+                <strong>Reminder emails are strictly opt-in</strong> and sent only the evening before a planned ride. Each email contains a short weather summary for the route start, a deep link back into the app, and a one-click unsubscribe link. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time.
+              </p>
             </section>
 
             <section>
@@ -117,6 +133,7 @@ export default function Privacy() {
                 <li><strong>Process subscriptions</strong>: Manage premium features and billing</li>
                 <li><strong>Improve the Service</strong>: Analyze usage patterns and fix bugs</li>
                 <li><strong>Communicate</strong>: Send important updates about your account or the Service</li>
+                <li><strong>Send tour reminders</strong>: If you opt in, email you the evening before a planned ride with the weather forecast for your route</li>
                 <li><strong>Enforce limits</strong>: Apply rate limits for free users</li>
               </ul>
             </section>
@@ -133,30 +150,54 @@ export default function Privacy() {
 
               <h3 className="text-xl font-medium mb-2 mt-4">4.2 RevenueCat (Subscription Management)</h3>
               <p className="text-slate-700 leading-relaxed">
-                Manages in-app purchases and subscriptions.<br />
+                Manages in-app purchases (iOS) and web subscriptions through RevenueCat Web Billing.<br />
                 Privacy Policy: <a href="https://www.revenuecat.com/privacy" className="text-sky-600 hover:text-sky-700 underline">https://www.revenuecat.com/privacy</a>
               </p>
 
-              <h3 className="text-xl font-medium mb-2 mt-4">4.3 Apple (App Store & Sign-In)</h3>
+              <h3 className="text-xl font-medium mb-2 mt-4">4.3 Apple (App Store &amp; Sign-In)</h3>
               <p className="text-slate-700 leading-relaxed">
                 Processes iOS app purchases and provides Sign in with Apple.<br />
                 Privacy Policy: <a href="https://www.apple.com/legal/privacy/" className="text-sky-600 hover:text-sky-700 underline">https://www.apple.com/legal/privacy/</a>
               </p>
 
-              <h3 className="text-xl font-medium mb-2 mt-4">4.4 Strava (Optional Integration)</h3>
+              <h3 className="text-xl font-medium mb-2 mt-4">4.4 Google (Sign-In)</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Provides Sign in with Google. If you choose this method, Google shares your email and basic profile information with us.<br />
+                Privacy Policy: <a href="https://policies.google.com/privacy" className="text-sky-600 hover:text-sky-700 underline">https://policies.google.com/privacy</a>
+              </p>
+
+              <h3 className="text-xl font-medium mb-2 mt-4">4.5 Stripe (Web Payments)</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Processes web subscription payments via RevenueCat Web Billing. We never see or store your payment card details.<br />
+                Privacy Policy: <a href="https://stripe.com/privacy" className="text-sky-600 hover:text-sky-700 underline">https://stripe.com/privacy</a>
+              </p>
+
+              <h3 className="text-xl font-medium mb-2 mt-4">4.6 Strava (Optional Integration)</h3>
               <p className="text-slate-700 leading-relaxed">
                 If connected, we access your planned routes (not activities). You can disconnect at any time in Settings.<br />
                 Privacy Policy: <a href="https://www.strava.com/legal/privacy" className="text-sky-600 hover:text-sky-700 underline">https://www.strava.com/legal/privacy</a>
               </p>
 
-              <h3 className="text-xl font-medium mb-2 mt-4">4.5 Weather Data Providers</h3>
+              <h3 className="text-xl font-medium mb-2 mt-4">4.7 Uberspace (Hosting &amp; Email Delivery)</h3>
+              <p className="text-slate-700 leading-relaxed">
+                Uberspace GmbH (Germany) hosts our marketing website and delivers transactional reminder emails via its SMTP server. For email delivery, Uberspace processes only the recipient address and the email content for the purpose of sending the message.<br />
+                Privacy Policy: <a href="https://uberspace.de/en/about/privacy/" className="text-sky-600 hover:text-sky-700 underline">https://uberspace.de/en/about/privacy/</a>
+              </p>
+
+              <h3 className="text-xl font-medium mb-2 mt-4">4.8 Weather Data Providers</h3>
               <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1">
                 <li><strong>Apple WeatherKit</strong>: Primary weather data provider (no personal data shared)</li>
                 <li><strong>Brightsky / DWD (Deutscher Wetterdienst)</strong>: Provides weather data for routes in Germany (no personal data shared)</li>
-                <li><strong>Open-Meteo</strong>: Fallback weather data provider (no personal data shared)</li>
+                <li><strong>Open-Meteo</strong>: Fallback weather data provider, also used to fetch the short forecast included in reminder emails (no personal data shared)</li>
               </ul>
 
-              <h3 className="text-xl font-medium mb-2 mt-4">4.6 Sunrise-Sunset.org</h3>
+              <h3 className="text-xl font-medium mb-2 mt-4">4.9 OpenStreetMap / Overpass</h3>
+              <p className="text-slate-700 leading-relaxed">
+                We query OpenStreetMap data via the Overpass API to estimate road surface roughness along your route. Only anonymous bounding-box coordinates are sent — no account or personal data.<br />
+                Privacy Policy: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" className="text-sky-600 hover:text-sky-700 underline">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a>
+              </p>
+
+              <h3 className="text-xl font-medium mb-2 mt-4">4.10 Sunrise-Sunset.org</h3>
               <p className="text-slate-700 leading-relaxed">
                 Provides sunrise/sunset times based on coordinates (no personal data shared).
               </p>
@@ -183,6 +224,8 @@ export default function Privacy() {
               <ul className="list-disc list-inside text-slate-700 mt-2 space-y-1">
                 <li><strong>Account data</strong>: Retained until you delete your account</li>
                 <li><strong>Route data</strong>: Retained until you delete the route or your account</li>
+                <li><strong>Tour plans</strong>: Retained until you delete the tour or your account</li>
+                <li><strong>Reminder consent timestamp</strong>: Retained as long as your reminder opt-in is active, plus a limited period after withdrawal as proof of valid consent</li>
                 <li><strong>Weather cache</strong>: Automatically expires after 1 hour</li>
               </ul>
             </section>
@@ -205,6 +248,11 @@ export default function Privacy() {
 
               <h3 className="text-xl font-medium mb-2 mt-4">6.5 Disconnect Third-Party Services</h3>
               <p className="text-slate-700 leading-relaxed">Revoke Strava access at any time in Settings.</p>
+
+              <h3 className="text-xl font-medium mb-2 mt-4">6.6 Withdraw Reminder Consent</h3>
+              <p className="text-slate-700 leading-relaxed">
+                You can disable tour reminder emails at any time via the master toggle in Settings, the per-tour checkbox when saving a tour, or the one-click unsubscribe link in any reminder email. Withdrawal takes effect immediately and does not affect the lawfulness of processing based on consent before its withdrawal.
+              </p>
             </section>
 
             <section>
@@ -256,6 +304,7 @@ export default function Privacy() {
                     <tr className="border-b"><td className="py-2 pr-4">Strava connection</td><td className="py-2 pr-4">Route import</td><td className="py-2">Until disconnection</td></tr>
                     <tr className="border-b"><td className="py-2 pr-4">Preferences</td><td className="py-2 pr-4">Personalization</td><td className="py-2">Until account deletion</td></tr>
                     <tr className="border-b"><td className="py-2 pr-4">Subscription status</td><td className="py-2 pr-4">Premium features</td><td className="py-2">Until account deletion</td></tr>
+                    <tr className="border-b"><td className="py-2 pr-4">Tour plans &amp; reminder consent</td><td className="py-2 pr-4">Email reminders the evening before a ride</td><td className="py-2">Until deletion / opt-out</td></tr>
                     <tr><td className="py-2 pr-4">Weather requests</td><td className="py-2 pr-4">Rate limiting</td><td className="py-2">1 week</td></tr>
                   </tbody>
                 </table>
