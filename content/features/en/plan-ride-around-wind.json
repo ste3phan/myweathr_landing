@@ -1,0 +1,25 @@
+{
+  "id": "plan-ride",
+  "order": 1,
+  "slug": "plan-ride-around-wind",
+  "tier": "free",
+  "beta": false,
+  "navTitle": "Plan your ride around the wind",
+  "navSub": "Head-, tail- and crosswind on every segment",
+  "shortTitle": "Plan your ride around the wind",
+  "title": "Plan your ride around the wind",
+  "metaTitle": "Plan your bike ride around the wind – {name}",
+  "description": "See headwind, tailwind and crosswind on every segment of your cycling route – at the time you will be there. Free for 3 plans a week.",
+  "intro": "A weather app tells you the wind in town. Your ride crosses forest, open fields and ridges over several hours. {name} shows the head-, tail- and crosswind on every segment of your route – at the time you'll be there.",
+  "ctaLabel": "Plan a route in the web app",
+  "hero": { "main": "wind-flow-map", "mainAlt": "Wind Flow Map: a route coloured by tailwind, crosswind and headwind", "overlay": "tailwind-score", "overlayAlt": "Tailwind Score with tailwind, crosswind and headwind shares" },
+  "howImage": "best-start-time",
+  "howImageAlt": "Optimal Time Window with a recommended start time",
+  "how": [
+    { "title": "Time-aware, not a snapshot", "text": "From your start time and speed, {name} calculates when you reach each point and takes the forecast for exactly that hour – coffee stops included." },
+    { "title": "Wind where you actually ride", "text": "Forecast wind is measured 10 m up. {name} corrects it to rider height and for the terrain – forest, town or open land." },
+    { "title": "Choose the direction that pays off", "text": "Ride your loop clockwise or the other way round, start earlier or later – compare the Tailwind Score and pick the version with the wind at your back on the way home." }
+  ],
+  "ctaTitle": "Check the wind on your next route.",
+  "relatedRaces": ["tour-de-france-2026-stage-1", "ironman-frankfurt-2026"]
+}

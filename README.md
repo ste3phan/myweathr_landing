@@ -1,142 +1,46 @@
-# myweathr.io Landing Page
+# myweathr.io – marketing site
 
-A modern, responsive landing page for myweathr.io - the smart weather companion for cyclists and outdoor athletes.
+Static Next.js 14 site (pages router, Tailwind, TypeScript) for myweathr.io.
+`next build` exports plain HTML to `out/` – no Node server needed.
 
-## Features
-
-- 📱 **Fully Responsive** - Optimized for mobile, tablet, and desktop
-- 🎨 **Modern Design** - Clean, professional UI with Tailwind CSS
-- 📧 **Newsletter Signup** - Email collection with double opt-in
-- ⚡ **Fast & Lightweight** - Built with Next.js for optimal performance
-- 🔒 **Privacy-First** - GDPR-compliant with clear privacy policy
-
-## Tech Stack
-
-- **Framework**: Next.js 14
-- **Styling**: Tailwind CSS
-- **Language**: JavaScript/React
-
-## Getting Started
-
-### 1. Install Dependencies
+## Develop
 
 ```bash
 npm install
+npm run dev        # http://localhost:3000/en/
+npm run build      # writes public/sitemap.xml, then exports to out/
+npm run typecheck
 ```
 
-### 2. Set Up Supabase
+## Structure
 
-Follow the detailed guide in `SUPABASE_SETUP.md` to:
-1. Create a Supabase project
-2. Run the SQL setup script
-3. Get your API keys
+| Path | What |
+|---|---|
+| `site.config.ts` | Product name, domain, App Store / web app / Instagram links, icon. Rename the product here only. |
+| `locales/en.ts`, `locales/de.ts` | All UI copy. `{name}` is replaced with `site.name`. |
+| `lib/i18n.ts` | Languages (`ALL_LANGS` shown in the UI, `AVAILABLE_LANGS` built), date/number formatting. |
+| `content/features/<lang>/*.json` | Use-case pages (`/[lang]/features/[slug]/`). Same `id` across languages links the translations (hreflang). |
+| `content/races/*.json` | Race forecast pages (`/[lang]/races/[slug]/`). New race = new file. `sections` holds per-km takeaways (optional). |
+| `content/changelog.ts` | Version history + roadmap (`/[lang]/changelog/`). |
+| `components/site/` | Header, footer, SEO head, shared UI (screenshots with light/dark `<picture>`, pills, App Store badge). |
+| `components/home/` | Homepage sections. |
+| `styles/globals.css` | Design tokens (light/dark via `prefers-color-scheme`) and component classes. |
 
-### 3. Set Up Environment Variables
+`/` is a static redirect to `/en/` or `/de/` (browser language). Legal pages (`/imprint/`, `/terms/`, `/privacy/`, `/delete-account/`) stay at the root, English only.
 
-Create a `.env.local` file in the root directory:
+## Adding a language
+
+1. `locales/<code>.ts` (typed against `en`), register it in `lib/i18n.ts` (`AVAILABLE_LANGS`, `MESSAGES`).
+2. `content/features/<code>/*.json` with the same `id`s.
+3. Add localised fields to each race JSON and the language to `scripts/generate-sitemap.mjs`.
+
+## Deploy (Uberspace)
+
+Build locally or on the server, then serve `out/` as static files:
 
 ```bash
-NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
-SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+npm ci && npm run build
+rsync -a --delete out/ <user>@<host>.uberspace.de:/var/www/virtual/<user>/myweathr.io/
 ```
 
-### 4. Run Development Server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### 5. Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-## Project Structure
-
-```
-myweathr.io_landing/
-├── pages/
-│   ├── api/
-│   │   └── newsletter.js    # Newsletter API endpoint
-│   ├── _app.js              # App wrapper
-│   ├── index.js             # Landing page
-│   ├── privacy.js           # Privacy policy
-│   └── terms.js             # Terms of service
-├── styles/
-│   └── globals.css          # Global styles
-├── public/                  # Static assets
-├── package.json
-└── README.md
-```
-
-## Newsletter Integration
-
-The newsletter uses **Supabase** to store subscriber emails. See `SUPABASE_SETUP.md` for detailed setup instructions.
-
-### Features
-
-- ✅ Email validation
-- ✅ Duplicate prevention
-- ✅ Timestamp tracking
-- ✅ Status management (pending/confirmed/unsubscribed)
-- ✅ Row Level Security (RLS)
-
-### Database Schema
-
-Subscribers are stored in the `newsletter_subscribers` table with:
-- Email (unique, lowercase)
-- Status (pending/confirmed/unsubscribed)
-- Timestamps (subscribed_at, confirmed_at, etc.)
-
-## Customization
-
-### Colors
-
-Edit the color scheme in `tailwind.config.js` or directly in components using Tailwind classes.
-
-### Content
-
-- **Hero Section**: Edit text in `pages/index.js`
-- **App Preview**: Replace placeholder with actual screenshot in `public/` folder
-- **Logo**: The logo is at `public/logo.svg`
-
-### SEO
-
-Update meta tags in the `<Head>` component in each page.
-
-## Deployment
-
-### Vercel (Recommended)
-
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-
-```bash
-npm run build
-# Deploy the .next folder
-```
-
-### Uberspace
-
-```bash
-npm run build
-# Copy .next, public, package.json to your Uberspace
-# Run: npm install --production && npm start
-```
-
-## License
-
-© 2025 myweathr.io - All rights reserved
-
-## Support
-
-For questions or issues, contact: support@myweathr.io
+The previous Node backend (port 3000, waitlist API) is no longer needed; see `UBERSPACE_DEPLOY.md` for the old setup.

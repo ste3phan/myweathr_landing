@@ -1,0 +1,25 @@
+{
+  "id": "plan-ride",
+  "order": 1,
+  "slug": "fahrt-nach-dem-wind-planen",
+  "tier": "free",
+  "beta": false,
+  "navTitle": "Fahrt nach dem Wind planen",
+  "navSub": "Gegen-, Rücken- und Seitenwind auf jedem Abschnitt",
+  "shortTitle": "Nach dem Wind planen",
+  "title": "Radtour nach dem Wind planen",
+  "metaTitle": "Radtour nach dem Wind planen – {name}",
+  "description": "Gegen-, Rücken- und Seitenwind auf jedem Abschnitt deiner Radroute – zu der Uhrzeit, zu der du dort bist. Kostenlos für 3 Planungen pro Woche.",
+  "intro": "Eine Wetter-App sagt dir den Wind in der Stadt. Deine Fahrt führt über Stunden durch Wald, offene Felder und über Kuppen. {name} zeigt Gegen-, Rücken- und Seitenwind auf jedem Abschnitt deiner Route – zu der Zeit, zu der du dort bist.",
+  "ctaLabel": "Route in der Web-App planen",
+  "hero": { "main": "wind-flow-map", "mainAlt": "Wind Flow Map: eine Route nach Rücken-, Seiten- und Gegenwind eingefärbt", "overlay": "tailwind-score", "overlayAlt": "Tailwind Score mit Anteilen Rücken-, Seiten- und Gegenwind" },
+  "howImage": "best-start-time",
+  "howImageAlt": "Optimales Zeitfenster mit empfohlener Startzeit",
+  "how": [
+    { "title": "Zeitbewusst statt Momentaufnahme", "text": "Aus Startzeit und Tempo berechnet {name}, wann du jeden Punkt erreichst, und nimmt die Prognose für genau diese Stunde – Kaffeepausen inklusive." },
+    { "title": "Wind dort, wo du fährst", "text": "Prognosewind wird in 10 m Höhe gemessen. {name} rechnet ihn auf Fahrerhöhe um und passt ihn ans Gelände an – Wald, Stadt oder offenes Land." },
+    { "title": "Die Richtung wählen, die sich lohnt", "text": "Runde im Uhrzeigersinn oder andersherum, früher oder später los – vergleich den Tailwind Score und nimm die Variante mit Rückenwind auf dem Heimweg." }
+  ],
+  "ctaTitle": "Prüf den Wind auf deiner nächsten Route.",
+  "relatedRaces": ["tour-de-france-2026-stage-1", "ironman-frankfurt-2026"]
+}

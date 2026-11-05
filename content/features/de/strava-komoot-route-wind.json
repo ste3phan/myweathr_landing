@@ -1,0 +1,25 @@
+{
+  "id": "strava-komoot",
+  "order": 2,
+  "slug": "strava-komoot-route-wind",
+  "tier": "free",
+  "beta": false,
+  "navTitle": "Strava- & Komoot-Route + Wind",
+  "navSub": "GPX importieren und den Wind sehen",
+  "shortTitle": "Strava & Komoot",
+  "title": "Windprognose für deine Strava- und Komoot-Routen",
+  "metaTitle": "Windprognose für Strava- und Komoot-Routen – {name}",
+  "description": "Route aus Strava, Komoot oder als GPX importieren und Gegen-, Rücken- und Seitenwind entlang der Strecke sehen – zu der Zeit, zu der du fährst.",
+  "intro": "Deine Routen liegen schon in Strava oder Komoot. Hol sie in {name} und sieh den Wind auf jedem Kilometer – ohne neu zu zeichnen und ohne aus der Stadtprognose zu raten.",
+  "ctaLabel": "Route in der Web-App importieren",
+  "hero": { "main": "wind-flow-map", "mainAlt": "Wind Flow Map einer importierten Route, nach Rücken-, Seiten- und Gegenwind eingefärbt", "overlay": "tailwind-score", "overlayAlt": "Tailwind Score der importierten Route" },
+  "howImage": "tailwind-score",
+  "howImageAlt": "Tailwind Score mit Anteilen Rücken-, Seiten- und Gegenwind einer Route",
+  "how": [
+    { "title": "Strava mit einem Tipp", "text": "Verbinde dein Strava-Konto einmal und wähle eine deiner gespeicherten Routen. Mit Premium kommen neue Routen jede Nacht automatisch." },
+    { "title": "Komoot und jeder andere Planer per GPX", "text": "Exportier eine GPX-Datei aus Komoot, Garmin Connect oder einem anderen Routenplaner und lad sie hoch – {name} liest den Track und berechnet den Wind entlang der Strecke." },
+    { "title": "Startzeit und Tempo festlegen", "text": "Sag {name}, wann du startest und wie schnell du fährst. Die App berechnet, wann du jeden Punkt erreichst, und nimmt die Prognose für genau diesen Moment." }
+  ],
+  "ctaTitle": "Bring deine nächste Route mit und sieh ihren Wind.",
+  "relatedRaces": ["vuelta-2026-stage-11", "ironman-frankfurt-2026"]
+}

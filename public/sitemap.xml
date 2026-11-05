@@ -1,23 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://myweathr.io/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://myweathr.io/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/"/>
   </url>
   <url>
-    <loc>https://myweathr.io/imprint</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://myweathr.io/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/"/>
   </url>
   <url>
-    <loc>https://myweathr.io/terms</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://myweathr.io/en/races/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/"/>
   </url>
   <url>
-    <loc>https://myweathr.io/privacy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://myweathr.io/de/races/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/changelog/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/changelog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/changelog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/changelog/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/races/ironman-frankfurt-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/ironman-frankfurt-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/ironman-frankfurt-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/ironman-frankfurt-2026/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/races/ironman-frankfurt-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/ironman-frankfurt-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/ironman-frankfurt-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/ironman-frankfurt-2026/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/races/tour-de-france-2026-stage-1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/tour-de-france-2026-stage-1/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/tour-de-france-2026-stage-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/tour-de-france-2026-stage-1/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/races/tour-de-france-2026-stage-1/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/tour-de-france-2026-stage-1/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/tour-de-france-2026-stage-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/tour-de-france-2026-stage-1/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/races/vuelta-2026-stage-11/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/vuelta-2026-stage-11/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/vuelta-2026-stage-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/vuelta-2026-stage-11/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/races/vuelta-2026-stage-11/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/vuelta-2026-stage-11/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/vuelta-2026-stage-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/vuelta-2026-stage-11/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/features/best-start-time/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/best-start-time/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/beste-startzeit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/best-start-time/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/features/beste-startzeit/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/best-start-time/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/beste-startzeit/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/best-start-time/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/features/crosswind-echelons/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/crosswind-echelons/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/seitenwind-windkanten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/crosswind-echelons/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/features/seitenwind-windkanten/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/crosswind-echelons/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/seitenwind-windkanten/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/crosswind-echelons/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/features/plan-ride-around-wind/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/plan-ride-around-wind/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/fahrt-nach-dem-wind-planen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/plan-ride-around-wind/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/features/fahrt-nach-dem-wind-planen/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/plan-ride-around-wind/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/fahrt-nach-dem-wind-planen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/plan-ride-around-wind/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/en/features/strava-komoot-route-wind/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/strava-komoot-route-wind/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/strava-komoot-route-wind/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/strava-komoot-route-wind/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/features/strava-komoot-route-wind/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/features/strava-komoot-route-wind/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/features/strava-komoot-route-wind/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/features/strava-komoot-route-wind/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/imprint/</loc>
+  </url>
+  <url>
+    <loc>https://myweathr.io/terms/</loc>
+  </url>
+  <url>
+    <loc>https://myweathr.io/privacy/</loc>
   </url>
 </urlset>

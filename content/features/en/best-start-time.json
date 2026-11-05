@@ -1,0 +1,25 @@
+{
+  "id": "best-start-time",
+  "order": 3,
+  "slug": "best-start-time",
+  "tier": "premium",
+  "beta": false,
+  "navTitle": "Best start time for your ride",
+  "navSub": "Leave when the wind is on your side",
+  "shortTitle": "Best start time",
+  "title": "Find the best start time for your ride",
+  "metaTitle": "Best start time for your bike ride – {name}",
+  "description": "The wind turns during the day. {name} checks your route against every start time in your window and recommends when to leave – for tailwind, dry roads or both.",
+  "intro": "The same loop can feel completely different at 7 am and at noon. {name} checks your route against every start time in your window and tells you when to leave – so the wind helps on the way home, not on the way out.",
+  "ctaLabel": "Find your start time in the web app",
+  "hero": { "main": "best-start-time", "mainAlt": "Optimal Time Window: recommended start time 07:34, better wind conditions for this route", "overlay": null, "overlayAlt": null },
+  "howImage": "wind-cost",
+  "howImageAlt": "Wind Cost: minutes lost into the wind and gained with it on this ride",
+  "how": [
+    { "title": "Every start time, one route", "text": "Pick the window you could start in. {name} runs your route through the forecast for each start time – with the arrival time at every point." },
+    { "title": "Tailwind, dry or balanced", "text": "Choose what matters today: maximum tailwind, a balance of wind and rain, or the driest ride. The recommendation follows your choice." },
+    { "title": "See what you gain", "text": "Compare the recommended start with your planned one – Tailwind Score and Wind Cost show what the earlier or later start is worth in minutes." }
+  ],
+  "ctaTitle": "Find out when to leave tomorrow.",
+  "relatedRaces": ["tour-de-france-2026-stage-1", "vuelta-2026-stage-11"]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "best-start-time",
+  "order": 3,
+  "slug": "beste-startzeit",
+  "tier": "premium",
+  "beta": false,
+  "navTitle": "Beste Startzeit",
+  "navSub": "Losfahren, wenn der Wind auf deiner Seite ist",
+  "shortTitle": "Beste Startzeit",
+  "title": "Die beste Startzeit für deine Radtour finden",
+  "metaTitle": "Beste Startzeit für deine Radtour – {name}",
+  "description": "Der Wind dreht im Lauf des Tages. {name} prüft deine Route für jede Startzeit in deinem Zeitfenster und empfiehlt, wann du losfahren solltest.",
+  "intro": "Dieselbe Runde fühlt sich um 7 Uhr ganz anders an als mittags. {name} prüft deine Route für jede Startzeit in deinem Zeitfenster und sagt dir, wann du losfahren solltest – damit der Wind auf dem Heimweg hilft und nicht auf dem Hinweg.",
+  "ctaLabel": "Startzeit in der Web-App finden",
+  "hero": { "main": "best-start-time", "mainAlt": "Optimales Zeitfenster: empfohlene Startzeit 07:34, bessere Windbedingungen für diese Route", "overlay": null, "overlayAlt": null },
+  "howImage": "wind-cost",
+  "howImageAlt": "Wind Cost: Minuten, die du gegen den Wind verlierst und mit ihm gewinnst",
+  "how": [
+    { "title": "Jede Startzeit, eine Route", "text": "Wähl das Zeitfenster, in dem du starten könntest. {name} rechnet deine Route für jede Startzeit durch – mit der Ankunftszeit an jedem Punkt." },
+    { "title": "Rückenwind, trocken oder ausgewogen", "text": "Entscheide, was heute zählt: maximaler Rückenwind, eine Balance aus Wind und Regen oder die trockenste Fahrt. Die Empfehlung folgt deiner Wahl." },
+    { "title": "Sehen, was du gewinnst", "text": "Vergleich die empfohlene Startzeit mit deiner geplanten – Tailwind Score und Wind Cost zeigen, was der frühere oder spätere Start in Minuten wert ist." }
+  ],
+  "ctaTitle": "Finde heraus, wann du morgen losfährst.",
+  "relatedRaces": ["tour-de-france-2026-stage-1", "vuelta-2026-stage-11"]
+}
