@@ -19,7 +19,7 @@ export const versions: { version: string; date: L; items: L[] }[] = [
   },
   {
     version: '1.4.7',
-    date: { en: 'September 2026', de: 'September 2026' },
+    date: { en: 'August 2026', de: 'August 2026' },
     items: [
       { en: 'New: Wind Cost – how many minutes the wind adds to your ride, based on your weight, FTP, bike type and riding position', de: 'Neu: Wind Cost – wie viele Minuten der Wind deiner Fahrt hinzufügt, abgestimmt auf Gewicht, FTP, Radtyp und Sitzposition' },
       { en: 'New: in-app messages with tips and updates', de: 'Neu: Nachrichten in der App mit Tipps und Neuigkeiten' },
@@ -29,12 +29,12 @@ export const versions: { version: string; date: L; items: L[] }[] = [
   },
   {
     version: '1.3.6',
-    date: { en: 'July 2026', de: 'Juli 2026' },
+    date: { en: 'June 2026', de: 'Juni 2026' },
     items: [{ en: 'Minor performance optimisations', de: 'Kleinere Performance-Verbesserungen' }],
   },
   {
     version: '1.3.5',
-    date: { en: 'July 2026', de: 'Juli 2026' },
+    date: { en: 'June 2026', de: 'Juni 2026' },
     items: [
       { en: 'Faster weather calculations when planning a ride', de: 'Schnellere Wetterberechnung beim Planen einer Fahrt' },
       { en: 'Deleted Strava routes stay deleted – no more reappearing after a sync, plus a restore option in Settings', de: 'Gelöschte Strava-Routen bleiben gelöscht – kein Wiederauftauchen nach dem Sync, dazu eine Wiederherstellen-Option in den Einstellungen' },
@@ -46,7 +46,7 @@ export const versions: { version: string; date: L; items: L[] }[] = [
   },
   {
     version: '1.3.4',
-    date: { en: 'July 2026', de: 'Juli 2026' },
+    date: { en: 'June 2026', de: 'Juni 2026' },
     items: [
       { en: "Ride reminders: plan a ride and get an email the evening before with the forecast and a direct link to your route's wind analysis", de: 'Tour-Erinnerungen: Fahrt planen und am Vorabend eine E-Mail mit Prognose und direktem Link zur Windanalyse deiner Route bekommen' },
       { en: 'Change your password right from Settings', de: 'Passwort direkt in den Einstellungen ändern' },
