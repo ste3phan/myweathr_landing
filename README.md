@@ -41,4 +41,4 @@ npm run typecheck
 
 ## Deploy (Uberspace)
 
-On the server: `cd ~/myweathr_landing && ./deploy/uberspace.sh main`. One-time switch from the old Node setup: see `UBERSPACE_DEPLOY.md`.
+On the server: `cd ~/myweathr_landing_static && ./deploy/uberspace.sh main`. One-time switch from the old Node setup: see `UBERSPACE_DEPLOY.md`.
