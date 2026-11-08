@@ -34,13 +34,11 @@ npm run typecheck
 2. `content/features/<code>/*.json` with the same `id`s.
 3. Add localised fields to each race JSON and the language to `scripts/generate-sitemap.mjs`.
 
+## SEO files
+
+`npm run build` regenerates `public/sitemap.xml` and `public/llms.txt` from `content/` (`scripts/generate-static-files.mjs`).
+`public/robots.txt` and `public/.htaccess` (404 page, www → apex, caching) are static.
+
 ## Deploy (Uberspace)
 
-Build locally or on the server, then serve `out/` as static files:
-
-```bash
-npm ci && npm run build
-rsync -a --delete out/ <user>@<host>.uberspace.de:/var/www/virtual/<user>/myweathr.io/
-```
-
-The previous Node backend (port 3000, waitlist API) is no longer needed; see `UBERSPACE_DEPLOY.md` for the old setup.
+On the server: `cd ~/myweathr_landing && ./deploy/uberspace.sh main`. One-time switch from the old Node setup: see `UBERSPACE_DEPLOY.md`.

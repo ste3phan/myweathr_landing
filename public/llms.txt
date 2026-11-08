@@ -1,0 +1,37 @@
+# myweathr
+
+> myweathr is a route-based wind forecast for cyclists and triathletes (iPhone app and web app). It shows headwind, tailwind and crosswind on every segment of a route at the time the rider actually reaches it, plus a 0–100 Tailwind Score, Wind Cost in minutes, the best start time and Echelon Analysis (crosswind split risk).
+
+Key facts:
+- Platforms: iOS app (https://apps.apple.com/app/myweathr-io/id6755927323) and web app (https://app.myweathr.io). Android is not available yet.
+- Route import: GPX, Strava (account connection, nightly sync with Premium), Komoot via GPX.
+- Weather sources: Apple WeatherKit, DWD and Open-Meteo, picking the most reliable source per region; wind corrected from 10 m to rider height and for terrain (forest, town, open land).
+- Free: wind along the route, Tailwind Score and route import for 3 plans per week, coarse route sections.
+- Premium: unlimited plans, finer route sections, Wind Cost (bike type and riding position), best start time, Echelon Analysis (beta), coffee stop planner, nightly Strava sync. USD 4.99/month or 44.99/year; EUR 5.99/month or 49.99/year.
+- Works for road cycling, gravel, MTB, triathlon and trail running.
+- Languages: English (/en/) and German (/de/).
+
+## Features
+
+- [Plan your ride around the wind](https://myweathr.io/en/features/plan-ride-around-wind/): See headwind, tailwind and crosswind on every segment of your cycling route – at the time you will be there. Free for 3 plans a week. German: https://myweathr.io/de/features/fahrt-nach-dem-wind-planen/
+- [Strava & Komoot route + wind](https://myweathr.io/en/features/strava-komoot-route-wind/): Import a route from Strava, Komoot or any GPX file and see headwind, tailwind and crosswind along it – at the time you will ride it. German: https://myweathr.io/de/features/strava-komoot-route-wind/
+- [Best start time for your ride](https://myweathr.io/en/features/best-start-time/): The wind turns during the day. myweathr checks your route against every start time in your window and recommends when to leave – for tailwind, dry roads or both. German: https://myweathr.io/de/features/beste-startzeit/
+- [Crosswind & echelons](https://myweathr.io/en/features/crosswind-echelons/): Echelon Analysis scores the crosswind risk of every sector of your route with surface-aware physics and land-use data – so you know where the group will split. German: https://myweathr.io/de/features/seitenwind-windkanten/
+
+## Race wind forecasts
+
+- [Tour de France 2026 · Stage 1 · Barcelona](https://myweathr.io/en/races/tour-de-france-2026-stage-1/): 40% headwind – the southerly off the Mediterranean, then Montjuïc. Tailwind Score 31/100.
+- [La Vuelta 2026 · Stage 11 · Cartagena → Lorca](https://myweathr.io/en/races/vuelta-2026-stage-11/): 54% tailwind from the east. Echelon risk: low. Tailwind Score 63/100.
+- [Ironman Frankfurt 2026 · Bike 180 km](https://myweathr.io/en/races/ironman-frankfurt-2026/): 56% crosswind from the west, gusts up to 22 km/h. Tailwind Score 45/100.
+
+## Pages
+
+- [Homepage](https://myweathr.io/en/): overview, how it works, Free vs. Premium, FAQ
+- [Startseite (Deutsch)](https://myweathr.io/de/)
+- [Changelog](https://myweathr.io/en/changelog/): release history and roadmap
+
+## Optional
+
+- [Privacy policy](https://myweathr.io/privacy/)
+- [Terms](https://myweathr.io/terms/)
+- [Imprint](https://myweathr.io/imprint/)

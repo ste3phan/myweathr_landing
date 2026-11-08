@@ -1,138 +1,65 @@
-# Deployment zu Uberspace - Next.js mit Node.js
+# Deploy auf Uberspace (statisch)
 
-## Option 1: Node.js Deployment (Empfohlen - API Routes funktionieren)
+Die Seite ist ein statischer Export (`out/`). Apache auf Uberspace liefert die Dateien direkt aus –
+kein Node-Prozess, kein Port, kein supervisord mehr.
 
-### 1. Auf Uberspace einloggen
+## Einmalige Umstellung (vom alten Node-Setup)
+
+Bisher lief `npm start` als supervisord-Service `myweathr` hinter einem Web-Backend auf Port 3000.
+
 ```bash
-ssh <username>@elara.uberspace.de
+ssh <user>@<host>.uberspace.de
+
+# 1. Neuen Stand holen und bauen (Repo liegt schon in ~/myweathr_landing)
+cd ~/myweathr_landing
+./deploy/uberspace.sh main          # oder: ./deploy/uberspace.sh feat/redesign-2026 zum Testen
+#   → baut und kopiert nach /var/www/virtual/$USER/myweathr.io/
+
+# 2. www-Domain auf denselben Ordner zeigen lassen (.htaccess leitet www → ohne www um)
+ln -s /var/www/virtual/$USER/myweathr.io /var/www/virtual/$USER/www.myweathr.io
+
+# 3. Web-Backend von Node (Port 3000) auf Apache zurückstellen – erst ab hier ist die neue Seite live
+uberspace web backend del myweathr.io
+uberspace web backend del www.myweathr.io
+uberspace web backend list          # myweathr.io darf hier nicht mehr auftauchen
+
+# 4. Alten Node-Service stoppen und entfernen
+supervisorctl stop myweathr
+rm ~/etc/services.d/myweathr.ini
+supervisorctl reread && supervisorctl update
 ```
 
-### 2. Node.js Version prüfen/setzen
+Andere Domains auf dem Account (z. B. stephan-lindauer.de) sind nicht betroffen: Uberspace nimmt für eine Domain
+den Ordner `/var/www/virtual/$USER/<domain>/`, wenn es ihn gibt, sonst `html/`.
+
+### Prüfen
+
 ```bash
-uberspace tools version show node
-uberspace tools version use node 20  # Next.js benötigt Node 18+
+curl -sI https://myweathr.io/            # 200, Weiterleitungsseite
+curl -sI https://myweathr.io/en/         # 200
+curl -sI https://www.myweathr.io/en/     # 301 → https://myweathr.io/en/
+curl -s  https://myweathr.io/llms.txt | head -3
+curl -sI https://myweathr.io/privacy     # 301 → /privacy/ (App-Store-Link bleibt gültig)
 ```
 
-### 3. Repository klonen
+### Zurück zum alten Stand (falls nötig)
+
 ```bash
-cd ~
-git clone https://github.com/ste3phan/myweathr_landing.git
-cd myweathr_landing
-```
-
-### 4. Dependencies installieren
-```bash
-npm install
-```
-
-### 5. Environment Variables setzen
-```bash
-nano .env.local
-```
-
-Füge ein:
-```
-NEXT_PUBLIC_SUPABASE_URL=https://pcjsyxyytolxyytzsime.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=<dein-service-role-key>
-```
-
-### 6. Production Build erstellen
-```bash
-npm run build
-```
-
-### 7. Domains hinzufügen
-```bash
-uberspace web domain add myweathr.io
-uberspace web domain add www.myweathr.io
-```
-
-### 8. Web Backend konfigurieren
-```bash
-# Backend für myweathr.io setzen (Node.js auf Port 3000)
 uberspace web backend set myweathr.io --http --port 3000
 uberspace web backend set www.myweathr.io --http --port 3000
+# Service-Datei wiederherstellen (Inhalt siehe Git-History dieser Datei) und starten
 ```
 
-**Wichtig:** Gib immer die Domain an, nicht nur `/`, damit andere Domains (z.B. stephan-lindauer.de) nicht betroffen sind!
-
-### 9. Supervisord Service erstellen
-```bash
-nano ~/etc/services.d/myweathr.ini
-```
-
-Inhalt:
-```ini
-[program:myweathr]
-directory=%(ENV_HOME)s/myweathr_landing
-command=npm start
-autostart=yes
-autorestart=yes
-startsecs=30
-```
-
-### 10. Service starten
-```bash
-supervisorctl reread
-supervisorctl update
-supervisorctl status
-```
-
-### 11. HTTPS einrichten (automatisch via Let's Encrypt)
-Uberspace richtet automatisch HTTPS ein!
-
----
-
-## Option 2: Static Export (Nur Frontend, API Routes extern)
-
-⚠️ **Warnung:** API Routes funktionieren nicht! Du müsstest die API-Logik zu Supabase Edge Functions migrieren.
-
-### 1. Static Export erstellen
-```bash
-npm run build
-```
-
-### 2. Dateien hochladen
-```bash
-scp -r out/* <username>@elara.uberspace.de:~/html/
-```
-
-### 3. .htaccess für Routing
-```bash
-nano ~/html/.htaccess
-```
-
-Inhalt:
-```apache
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /$1.html [L]
-```
-
----
-
-## Empfehlung
-
-**Option 1 (Node.js)** ist die beste Wahl, weil:
-- ✅ API Routes funktionieren
-- ✅ Einfaches Deployment
-- ✅ Automatische Updates via Git Pull
-- ✅ Supervisord überwacht den Prozess
-
-## Updates deployen
+## Updates
 
 ```bash
-ssh <username>@elara.uberspace.de
-cd ~/myweathr_landing
-git pull
-npm install
-npm run build
-supervisorctl restart myweathr
+ssh <user>@<host>.uberspace.de
+cd ~/myweathr_landing && ./deploy/uberspace.sh main
 ```
 
-## Logs checken
+Das Skript bricht ab, bevor es etwas kopiert, wenn der Build fehlschlägt – die Live-Seite bleibt dann unverändert.
 
-```bash
-supervisorctl tail -f myweathr
-```
+## Nach dem Livegang
+
+- Google Search Console: Sitemap `https://myweathr.io/sitemap.xml` neu einreichen.
+- Die alten Startseiten-Anker (`/#features`, `/#faq`) landen über die Weiterleitung auf `/en/` bzw. `/de/`.

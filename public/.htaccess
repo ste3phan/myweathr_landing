@@ -1,0 +1,26 @@
+# Uberspace (Apache) – static export of the marketing site.
+
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# www → apex
+RewriteCond %{HTTP_HOST} ^www\.myweathr\.io$ [NC]
+RewriteRule ^(.*)$ https://myweathr.io/$1 [R=301,L]
+
+# Old single-language URLs from the previous site
+RewriteRule ^confirm/?$ /en/ [R=301,L]
+RewriteRule ^confirmed/?$ /en/ [R=301,L]
+
+<IfModule mod_headers.c>
+  # Hashed build assets never change
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(png|jpg|svg|ico)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(html|txt|xml)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
