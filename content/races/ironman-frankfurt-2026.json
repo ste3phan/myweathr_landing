@@ -3,15 +3,39 @@
   "order": 3,
   "type": "triathlon",
   "series": "Ironman Frankfurt 2026",
-  "shortName": { "en": "Ironman Frankfurt", "de": "Ironman Frankfurt" },
-  "name": { "en": "Ironman Frankfurt 2026 · Bike 180 km", "de": "Ironman Frankfurt 2026 · Rad 180 km" },
-  "cardTitle": { "en": "Bike course · 180 km", "de": "Radstrecke · 180 km" },
-  "breadcrumb": { "en": "Ironman Frankfurt", "de": "Ironman Frankfurt" },
+  "shortName": {
+    "en": "Ironman Frankfurt",
+    "de": "Ironman Frankfurt"
+  },
+  "name": {
+    "en": "Ironman Frankfurt 2026 · Bike 180 km",
+    "de": "Ironman Frankfurt 2026 · Rad 180 km"
+  },
+  "cardTitle": {
+    "en": "Bike course · 180 km",
+    "de": "Radstrecke · 180 km"
+  },
+  "breadcrumb": {
+    "en": "Ironman Frankfurt",
+    "de": "Ironman Frankfurt"
+  },
   "date": "2026-06-28",
   "startTime": "08:00",
   "distances": [
-    { "label": { "en": "Bike", "de": "Rad" }, "km": 180 },
-    { "label": { "en": "Run", "de": "Laufen" }, "km": 42.2 }
+    {
+      "label": {
+        "en": "Bike",
+        "de": "Rad"
+      },
+      "km": 180
+    },
+    {
+      "label": {
+        "en": "Run",
+        "de": "Laufen"
+      },
+      "km": 42.2
+    }
   ],
   "note": {
     "en": "56% crosswind from the west, gusts up to 22 km/h.",
@@ -25,13 +49,20 @@
     "de": "Ironman Frankfurt 2026, Radstrecke von Frankfurt in die Wetterau, nach prognostiziertem Wind eingefärbt"
   },
   "tailwindScore": 45,
-  "shares": { "tail": null, "cross": 56, "head": null },
+  "shares": {
+    "tail": null,
+    "cross": 56,
+    "head": null
+  },
   "windDirection": "W",
   "gustsKmh": 22,
   "rainPct": 2,
   "tempC": 30.8,
   "echelonRisk": null,
-  "weatherSource": "DWD via Bright Sky",
+  "weatherSource": "DWD",
   "sections": [],
-  "relatedFeatures": ["crosswind-echelons", "best-start-time"]
+  "relatedFeatures": [
+    "crosswind-echelons",
+    "best-start-time"
+  ]
 }

@@ -3,10 +3,22 @@
   "order": 1,
   "type": "road",
   "series": "Tour de France 2026",
-  "shortName": { "en": "Tour de France", "de": "Tour de France" },
-  "name": { "en": "Tour de France 2026 · Stage 1 · Barcelona", "de": "Tour de France 2026 · Etappe 1 · Barcelona" },
-  "cardTitle": { "en": "Stage 1 · Barcelona", "de": "Etappe 1 · Barcelona" },
-  "breadcrumb": { "en": "Tour de France · Stage 1", "de": "Tour de France · Etappe 1" },
+  "shortName": {
+    "en": "Tour de France",
+    "de": "Tour de France"
+  },
+  "name": {
+    "en": "Tour de France 2026 · Stage 1 · Barcelona",
+    "de": "Tour de France 2026 · Etappe 1 · Barcelona"
+  },
+  "cardTitle": {
+    "en": "Stage 1 · Barcelona",
+    "de": "Etappe 1 · Barcelona"
+  },
+  "breadcrumb": {
+    "en": "Tour de France · Stage 1",
+    "de": "Tour de France · Etappe 1"
+  },
   "date": "2026-07-04",
   "startTime": "18:45",
   "distances": [],
@@ -22,13 +34,20 @@
     "de": "Tour de France 2026, Etappe 1 in Barcelona nach Wind eingefärbt, langer roter Gegenwind-Abschnitt"
   },
   "tailwindScore": 31,
-  "shares": { "tail": null, "cross": null, "head": 40 },
+  "shares": {
+    "tail": null,
+    "cross": null,
+    "head": 40
+  },
   "windDirection": "S",
   "gustsKmh": 18.8,
   "rainPct": 0,
   "tempC": 30.8,
   "echelonRisk": null,
-  "weatherSource": null,
+  "weatherSource": "Apple Weather",
   "sections": [],
-  "relatedFeatures": ["crosswind-echelons", "best-start-time"]
+  "relatedFeatures": [
+    "crosswind-echelons",
+    "best-start-time"
+  ]
 }
