@@ -32,7 +32,7 @@ npm run typecheck
 
 1. `locales/<code>.ts` (typed against `en`), register it in `lib/i18n.ts` (`AVAILABLE_LANGS`, `MESSAGES`).
 2. `content/features/<code>/*.json` with the same `id`s.
-3. Add localised fields to each race JSON and the language to `scripts/generate-sitemap.mjs`.
+3. Add localised fields to each race JSON and the language to `scripts/generate-static-files.mjs`.
 
 ## SEO files
 
