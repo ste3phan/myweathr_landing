@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /api/
+Disallow: /privacy-waitlist/
+Disallow: /terms-waitlist/
 
 Sitemap: https://myweathr.io/sitemap.xml

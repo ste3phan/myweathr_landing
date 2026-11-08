@@ -1,0 +1,25 @@
+{
+  "id": "crosswind-echelons",
+  "order": 4,
+  "slug": "seitenwind-windkanten",
+  "tier": "premium",
+  "beta": true,
+  "navTitle": "Seitenwind & Windkanten",
+  "navSub": "Wo Gruppe oder Rennen reißen",
+  "shortTitle": "Windkanten",
+  "title": "Seitenwind und Windkanten: sieh, wo das Rennen reißt",
+  "metaTitle": "Seitenwind- & Windkanten-Prognose für Radfahrer – {name}",
+  "description": "Die Windkanten-Analyse bewertet das Seitenwind-Risiko jedes Sektors deiner Route mit oberflächenbewusster Physik und Landnutzungsdaten – damit du weißt, wo die Gruppe reißt.",
+  "intro": "Bei Seitenwind zerfällt das Feld in Windkanten – und wer hinten in der falschen hängt, ist weg. Die Windkanten-Analyse zeigt dir vor dem Start, welche Sektoren offen liegen, wie hoch das Split-Risiko ist und wo du vorne sein musst.",
+  "ctaLabel": "Route in der Web-App analysieren",
+  "hero": { "main": "echelon", "mainAlt": "Windkanten-Analyse: kritische Abschnitte, Hochrisiko-Distanz und maximales Split-Risiko mit Karte", "overlay": null, "overlayAlt": null },
+  "howImage": "wind-flow-map",
+  "howImageAlt": "Wind Flow Map mit gelben Seitenwind-Abschnitten",
+  "how": [
+    { "title": "Sektor für Sektor", "text": "Deine Route wird in Sektoren geteilt. Für jeden kombiniert {name} Windstärke, Windwinkel und Böen zu der Zeit, zu der die Gruppe dort ist." },
+    { "title": "Oberflächenbewusste Physik", "text": "Offenes Feld, Wald oder Stadt: CORINE- und OpenStreetMap-Landnutzungsdaten zeigen, wie geschützt jeder Sektor liegt – Seitenwind hinter einer Baumreihe ist kein Seitenwind auf freiem Acker." },
+    { "title": "Wissen, wo du vorne sein musst", "text": "Kritische Abschnitte, Hochrisiko-Distanz und maximales Split-Risiko auf einen Blick – für Rennen, Gruppenausfahrten und Triathlon-Radstrecken." }
+  ],
+  "ctaTitle": "Sieh, wo deine nächste Gruppenausfahrt reißt.",
+  "relatedRaces": ["vuelta-2026-stage-11", "ironman-frankfurt-2026"]
+}

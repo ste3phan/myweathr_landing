@@ -1,0 +1,25 @@
+{
+  "id": "crosswind-echelons",
+  "order": 4,
+  "slug": "crosswind-echelons",
+  "tier": "premium",
+  "beta": true,
+  "navTitle": "Crosswind & echelons",
+  "navSub": "Where the group ride or race will split",
+  "shortTitle": "Crosswind & echelons",
+  "title": "Crosswind and echelons: see where the race will split",
+  "metaTitle": "Crosswind & echelon forecast for cyclists – {name}",
+  "description": "Echelon Analysis scores the crosswind risk of every sector of your route with surface-aware physics and land-use data – so you know where the group will split.",
+  "intro": "In a crosswind the bunch splits into echelons – and whoever is at the back of the wrong one is gone. Echelon Analysis shows you before the start which sectors are exposed, how strong the split risk is and where you need to be at the front.",
+  "ctaLabel": "Analyse a route in the web app",
+  "hero": { "main": "echelon", "mainAlt": "Echelon Analysis: critical sections, high-risk distance and max split risk, with the route mapped by split risk", "overlay": null, "overlayAlt": null },
+  "howImage": "wind-flow-map",
+  "howImageAlt": "Wind Flow Map with crosswind sections in yellow",
+  "how": [
+    { "title": "Sector by sector", "text": "Your route is split into sectors. For each one, {name} combines wind speed, wind angle and gusts at the time the group gets there." },
+    { "title": "Surface-aware physics", "text": "Open fields, forest or town: CORINE and OpenStreetMap land-use data show how sheltered each sector is – a crosswind behind a tree line is not a crosswind on open farmland." },
+    { "title": "Know where to be at the front", "text": "Critical sections, high-risk distance and maximum split risk at a glance – for races, group rides and triathlon bike courses." }
+  ],
+  "ctaTitle": "See where your next group ride will split.",
+  "relatedRaces": ["vuelta-2026-stage-11", "ironman-frankfurt-2026"]
+}

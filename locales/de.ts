@@ -1,0 +1,289 @@
+// Deutsche Texte. Quelle: design-reference/Home-Mobile.dc.html.
+import type en from './en'
+
+const de: typeof en = {
+  locale: 'de-DE',
+  meta: {
+    homeTitle: '{name} – Windprognose für deine Radroute',
+    homeDescription:
+      'Gegen-, Rücken- und Seitenwind für jeden Kilometer deiner Fahrt – zu der Uhrzeit, zu der du dort bist. Tailwind Score, Wind Cost, beste Startzeit und Windkanten-Analyse für Radsport und Triathlon.',
+    changelogTitle: 'Changelog & Roadmap – {name}',
+    changelogDescription: 'Was neu ist in {name} und was als Nächstes kommt.',
+    racesTitle: 'Windprognosen für Rennen – {name}',
+    racesDescription:
+      'Windanalysen echter Rennen vor dem Start: Tour de France, La Vuelta, Ironman – Rücken-, Seiten- und Gegenwind Abschnitt für Abschnitt.',
+  },
+  nav: {
+    main: 'Hauptmenü',
+    features: 'Funktionen',
+    how: "So funktioniert's",
+    premium: 'Premium',
+    races: 'Rennprognosen',
+    faq: 'FAQ',
+    language: 'Sprache',
+    languageCurrent: 'Sprache: Deutsch',
+    openWebApp: 'Web-App öffnen',
+    download: 'Herunterladen',
+    downloadShort: 'Laden',
+    menu: 'Menü',
+    openMenu: 'Menü öffnen',
+    soon: 'bald',
+    home: 'Start',
+  },
+  appStore: { top: 'Laden im', bottom: 'App Store', aria: 'Laden im App Store' },
+  hero: {
+    eyebrow: 'Windprognose für Radsport & Triathlon',
+    title: 'Kenn den Wind auf deiner Route.',
+    sub: 'Gegen-, Rücken- und Seitenwind für jeden Kilometer – zu der Uhrzeit, zu der du wirklich dort bist.',
+    metaImport: 'Import aus GPX, Strava, Komoot',
+    metaPlatforms: 'iPhone & Web · Android noch nicht verfügbar',
+    mapAlt:
+      'App-Screenshot Wind Flow Map: Runde bei Solingen und Remscheid nach Wind eingefärbt – überwiegend Seitenwind, ein Rückenwind- und zwei Gegenwind-Abschnitte',
+    tailwindAlt: 'Tailwind Score derselben Fahrt mit Anteilen Rücken-, Seiten- und Gegenwind',
+  },
+  how: {
+    eyebrow: "So funktioniert's",
+    title: 'Deine Route. Deine Startzeit. Der Wind, der dich dort erwartet.',
+    steps: [
+      {
+        title: 'Route importieren',
+        text: 'GPX hochladen, aus Strava wählen oder aus Komoot exportieren. Startzeit und Tempo festlegen.',
+      },
+      {
+        title: 'Wind auf jedem Abschnitt sehen',
+        text: '{name} weiß, wann du wo bist – und nimmt das Wetter genau für diesen Moment. Gelände­bewusst, auf Fahrerhöhe korrigiert.',
+      },
+      {
+        title: 'Beste Startzeit wählen',
+        text: 'Verschieb den Start und sieh, wie sich der Wind ändert – oder lass Premium das beste Zeitfenster finden.',
+      },
+    ],
+  },
+  features: {
+    windCost: {
+      title: 'Was kostet dich der Wind heute?',
+      text: 'Wind Cost rechnet die Prognose in Minuten um: Zeit, die du gegen den Wind verlierst, Zeit, die du mit ihm gewinnst, und der härteste Abschnitt – für dein Rad, deine Sitzposition und deine Leistung.',
+      bikeLabel: 'Rad',
+      bikes: ['Rennrad', 'Zeitfahrrad', 'Gravel', 'MTB'],
+      positionLabel: 'Position',
+      positions: ['Oberlenker', 'Bremsgriffe', 'Unterlenker', 'Aero'],
+      more: 'Mehr zu Wind Cost',
+      alt: 'Wind Cost: +1 Minute kostet dich der Wind auf dieser Fahrt; 2 Min. gegen den Wind, 1 Min. mit dem Wind; härtester Abschnitt km 0–20',
+    },
+    startTime: {
+      title: 'Fahr los, wenn der Wind auf deiner Seite ist.',
+      text: 'Der Wind dreht im Lauf des Tages. {name} prüft deine Route für jede Startzeit in deinem Zeitfenster und empfiehlt, wann du losfahren solltest – für maximalen Rückenwind, eine Balance aus Wind und Regen oder die trockenste Fahrt.',
+      more: 'Mehr zur besten Startzeit',
+      alt: 'Optimales Zeitfenster: empfohlene Startzeit 07:34',
+    },
+    tailwind: {
+      title: 'Eine Zahl für die ganze Fahrt.',
+      text: 'Der Tailwind Score bewertet deine Route von 0 bis 100 – und zeigt, wie viel davon Rücken-, Seiten- und Gegenwind ist. Routen und Tage auf einen Blick vergleichen.',
+      scaleLow: '0 · Gegenwind',
+      scaleHigh: '100 · Rückenwind',
+      more: 'Mehr zum Tailwind Score',
+      alt: 'Tailwind Score einer Fahrt: 7 % Rückenwind, 80 % Seitenwind, 13 % Gegenwind',
+    },
+    echelon: {
+      title: 'Sieh, wo die Gruppe reißt.',
+      text: 'Die Windkanten-Analyse bewertet das Seitenwind-Risiko jedes Sektors – mit oberflächenbewusster Physik und Landnutzungsdaten –, damit du vorne bist, bevor das Rennen oder die Gruppenausfahrt auseinanderfällt.',
+      more: 'Mehr zu Seitenwind & Windkanten',
+      alt: 'Windkanten-Analyse: kritische Abschnitte, Hochrisiko-Distanz und maximales Split-Risiko mit Karte',
+    },
+    tiles: [
+      {
+        icon: 'coffee',
+        tier: 'premium',
+        title: 'Kaffeepausen-Planer',
+        text: 'Stopp und Dauer setzen – Ankunftszeiten und der Wind für den Rest der Fahrt verschieben sich mit.',
+      },
+      {
+        icon: 'sync',
+        tier: 'premium',
+        title: 'Strava-Sync jede Nacht',
+        text: 'Strava einmal verbinden – deine Routen kommen jede Nacht automatisch.',
+      },
+      {
+        icon: 'cloud',
+        tier: 'free',
+        title: 'Mehrere Wetterquellen',
+        text: 'Apple WeatherKit, DWD und Open-Meteo – je Region die zuverlässigste Quelle.',
+      },
+      {
+        icon: 'terrain',
+        tier: 'free',
+        title: 'Geländebewusster Wind',
+        text: 'Wald, Stadt oder offenes Land – der Wind wird ans Gelände angepasst und auf Fahrerhöhe umgerechnet.',
+      },
+    ],
+  },
+  tiers: { free: 'Kostenlos', premium: 'Premium', beta: 'Beta' },
+  accuracy: {
+    eyebrow: 'Genauigkeit',
+    title: 'Kostenlos zeigt den Trend. Premium jeden Wechsel.',
+    text: 'Dieselbe Fahrt von Girona zum Cap de Creus, dieselbe Prognose. Kostenlos mittelt über lange Abschnitte – der Gegenwind nördlich von Roses geht im Seitenwind unter. Premium folgt der Route in viel feineren Abschnitten und zeigt ihn.',
+    free: {
+      caption: 'Grobe Abschnitte',
+      alt: 'Kostenlos: Route von Girona zum Cap de Creus in groben Abschnitten – nur Rücken- und Seitenwind sichtbar',
+    },
+    premium: {
+      caption: 'Feine Abschnitte',
+      alt: 'Premium: dieselbe Route in feinen Abschnitten – Gegenwind nördlich von Roses rot sichtbar',
+    },
+  },
+  races: {
+    eyebrow: 'Rennprognosen',
+    title: 'Echte Rennen, vor dem Start analysiert.',
+    all: 'Alle Rennprognosen',
+    cta: 'Windprognose',
+    score: 'Tailwind Score',
+    indexTitle: 'Windprognosen für Rennen',
+    indexIntro:
+      'Vor dem Start schicken wir die Strecken echter Rennen durch {name}: wo das Feld Rückenwind hat, wo es im Seitenwind reißt und wo der Gegenwind wehtut.',
+  },
+  pricing: {
+    eyebrow: 'Kostenlos & Premium',
+    title: 'Kostenlos starten. Premium, wenn jede Minute zählt.',
+    billing: 'Abrechnungszeitraum',
+    monthly: 'Monatlich',
+    yearly: 'Jährlich',
+    yearlyBadge: '−30 %',
+    free: {
+      price: '0 €',
+      text: 'Wind entlang der Route und Tailwind Score – für 3 Planungen pro Woche.',
+      cta: 'Kostenlos starten',
+    },
+    premium: {
+      cta: 'Premium holen',
+      yearly: {
+        amount: '49,99 €',
+        per: '/ Jahr',
+        note: 'Alles aus Kostenlos, dazu Wind Cost, beste Startzeit, Windkanten-Analyse und unbegrenzte, feinere Planungen. Rund 30 % günstiger als monatlich.',
+      },
+      monthly: {
+        amount: '5,99 €',
+        per: '/ Monat',
+        note: 'Alles aus Kostenlos, dazu Wind Cost, beste Startzeit, Windkanten-Analyse und unbegrenzte, feinere Planungen. Oder 49,99 € im Jahr.',
+      },
+    },
+    table: {
+      caption: 'Vergleich Kostenlos und Premium',
+      feature: 'Funktion',
+      included: 'Enthalten',
+      notIncluded: 'Nicht enthalten',
+      rows: [
+        { label: 'Wind entlang der Route', free: true, premium: true },
+        { label: 'Tailwind Score', free: true, premium: true },
+        { label: 'Planungen pro Woche', free: '3', premium: 'Unbegrenzt' },
+        { label: 'Genauigkeit', free: 'Grob', premium: 'Fein' },
+        { label: 'Wind Cost mit Rad & Position', free: false, premium: true },
+        { label: 'Beste Startzeit', free: false, premium: true },
+        { label: 'Windkanten-Analyse (Beta)', free: false, premium: true },
+        { label: 'Kaffeepausen-Planer', free: false, premium: true },
+        { label: 'Strava-Sync jede Nacht', free: false, premium: true },
+      ],
+    },
+  },
+  faq: {
+    eyebrow: 'FAQ',
+    title: 'Was Radfahrer fragen.',
+    items: [
+      {
+        q: 'Was unterscheidet {name} von Windy oder AccuWeather?',
+        a: 'Diese Apps zeigen das Wetter an einem Ort. {name} zeigt den Wind entlang deiner Route – zu der Zeit, zu der du dort bist – mit Rücken-, Gegen- und Seitenwind-Abschnitten, Wind Cost und Windkanten-Analyse.',
+      },
+      {
+        q: 'Was ist die Windkanten-Analyse?',
+        a: 'Eine Premium-Funktion (Beta), die Profi-Taktik auf deine Routen überträgt: Sie bewertet das Seitenwind-Risiko jedes Sektors mit oberflächenbewusster Physik und CORINE/OSM-Landnutzungsdaten.',
+      },
+      {
+        q: 'Brauche ich ein iPhone, oder geht {name} auch im Browser?',
+        a: 'Beides: die iOS-App und die Web-App unter {webAppHost}, mit Anmeldung über Google oder Apple. Android gibt es noch nicht.',
+      },
+      {
+        q: 'Gibt es eine kostenlose Version?',
+        a: 'Ja. Windanalyse der Route, Tailwind Score und Routenimport sind kostenlos – für 3 Planungen pro Woche. Premium bringt unbegrenzte Planungen, feinere Abschnitte, Wind Cost, beste Startzeit, Windkanten-Analyse, Kaffeepausen-Planer und nächtlichen Strava-Sync.',
+      },
+      {
+        q: 'Welche Wetterquellen nutzt {name}?',
+        a: 'Apple WeatherKit, DWD und Open-Meteo – je Region die zuverlässigste Quelle – mit Wind, der von 10 m auf Fahrerhöhe umgerechnet wird.',
+      },
+      {
+        q: 'Kann ich Routen aus Strava oder Komoot importieren?',
+        a: 'Ja. Strava verbindest du mit deinem Konto, Komoot-Routen kommen per GPX. Mit Premium werden deine Strava-Routen jede Nacht automatisch synchronisiert.',
+      },
+      {
+        q: 'Ist {name} nur fürs Rennrad?',
+        a: 'Nein. Es passt auch für Gravel, MTB, Triathlon, Trailrunning und andere Outdoor-Sportarten, bei denen der Wind zählt.',
+      },
+      {
+        q: 'Wie genau sind die Prognosen?',
+        a: 'Die Basis liefern die Wetterdienste oben. {name} ergänzt geländebewussten Wind, die Korrektur auf Fahrerhöhe, regionale Quellen-Fallbacks und zeitintegrierten Niederschlag.',
+      },
+    ],
+  },
+  cta: {
+    title: 'Deine nächste Fahrt – nach dem Wind geplant.',
+    sub: 'Kostenlos auf dem iPhone und im Browser.',
+  },
+  footer: {
+    tagline: 'Routenbasierte Windprognose für Radsport und Triathlon.',
+    features: 'Funktionen',
+    races: 'Rennprognosen',
+    changelog: 'Changelog',
+    imprint: 'Impressum',
+    terms: 'Nutzungsbedingungen',
+    privacy: 'Datenschutz',
+    language: 'Sprache',
+  },
+  useCase: {
+    breadcrumb: 'Brotkrumen-Navigation',
+    howTitle: "So funktioniert's",
+    related: 'Verwandte Themen',
+    raceForecasts: 'Rennprognosen',
+    windForecast: 'Windprognose',
+  },
+  event: {
+    road: 'Straßenrennen',
+    triathlon: 'Triathlon',
+    start: 'Start',
+    stage: 'Etappe',
+    intro:
+      'Wo der Wind am Renntag hilft und wo er wehtut – Abschnitt für Abschnitt, zu der Uhrzeit, zu der das Feld wirklich dort ist.',
+    weatherData: 'Wetterdaten',
+    score: 'Tailwind Score',
+    scoreBike: 'Tailwind Score · Rad',
+    tail: 'Rücken',
+    cross: 'Seite',
+    head: 'Gegen',
+    tailwind: 'Rückenwind',
+    crosswind: 'Seitenwind',
+    headwind: 'Gegenwind',
+    wind: 'Wind',
+    gusts: 'Böen',
+    rain: 'Regen',
+    tempStart: 'Temperatur am Start',
+    echelonRisk: 'Windkanten-Risiko',
+    keyTakeaways: 'Das Wichtigste',
+    bikeTakeaways: 'Rad: das Wichtigste',
+    runTakeaways: 'Laufen: das Wichtigste',
+    disclaimer:
+      'Die Prognose entstand vor dem Renntag. Vorhersagen ändern sich bis zum Rennmorgen – prüf für deine nächste Fahrt deine eigene Route.',
+    trainingTitle: 'Training auf deinen eigenen Straßen?',
+    trainingText: 'Importier deine Route und sieh den Wind für deine nächste Fahrt.',
+    trainingCta: 'Eigene Route prüfen',
+    moreRaces: 'Weitere Rennprognosen',
+    learnMore: 'Mehr erfahren',
+    mapAltSuffix: 'nach prognostiziertem Wind eingefärbt',
+  },
+  changelog: {
+    eyebrow: 'Changelog',
+    title: 'Neu in {name}',
+    intro: 'Alle Versionen seit dem Start im App Store – und woran wir als Nächstes bauen.',
+    version: 'Version',
+    roadmapTitle: 'Demnächst',
+    roadmapIntro: 'Wir entwickeln {name} laufend weiter. Das steht als Nächstes an.',
+  },
+}
+
+export default de

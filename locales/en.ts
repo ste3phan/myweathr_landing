@@ -1,0 +1,289 @@
+// English copy. Source of truth: design-reference/Main.dc.html.
+// `{name}` is replaced with site.name at render time.
+
+const en = {
+  locale: 'en-GB',
+  meta: {
+    homeTitle: '{name} – Wind forecast for your cycling route',
+    homeDescription:
+      'Headwind, tailwind and crosswind for every kilometre of your ride – at the time you will be there. Tailwind Score, Wind Cost, best start time and Echelon Analysis for cyclists and triathletes.',
+    changelogTitle: 'Changelog & roadmap – {name}',
+    changelogDescription: 'What is new in {name} and what is coming next.',
+    racesTitle: 'Race wind forecasts – {name}',
+    racesDescription:
+      'Wind analyses of real races before the start: Tour de France, La Vuelta, Ironman – tailwind, crosswind and headwind section by section.',
+  },
+  nav: {
+    main: 'Main',
+    features: 'Features',
+    how: 'How it works',
+    premium: 'Premium',
+    races: 'Race forecasts',
+    faq: 'FAQ',
+    language: 'Language',
+    languageCurrent: 'Language: English',
+    openWebApp: 'Open web app',
+    download: 'Download',
+    downloadShort: 'Download',
+    menu: 'Menu',
+    openMenu: 'Open menu',
+    soon: 'soon',
+    home: 'Home',
+  },
+  appStore: { top: 'Download on the', bottom: 'App Store', aria: 'Download on the App Store' },
+  hero: {
+    eyebrow: 'Wind forecast for cyclists & triathletes',
+    title: 'Know the wind on your route.',
+    sub: "Headwind, tailwind and crosswind for every kilometre – at the time you'll actually be there.",
+    metaImport: 'Import from GPX, Strava, Komoot',
+    metaPlatforms: 'iPhone & web · Android not yet',
+    mapAlt:
+      '{name} Wind Flow Map: a loop near Solingen and Remscheid coloured by wind – mostly crosswind, one tailwind and two headwind stretches',
+    tailwindAlt: 'Tailwind Score of the same ride with tailwind, crosswind and headwind shares',
+  },
+  how: {
+    eyebrow: 'How it works',
+    title: "Your route. Your start time. The wind you'll actually ride into.",
+    steps: [
+      {
+        title: 'Import your route',
+        text: 'Drop in a GPX file, pick a route from Strava or export one from Komoot. Set your start time and average speed.',
+      },
+      {
+        title: 'See the wind on every segment',
+        text: '{name} works out when you reach each point and uses the forecast for that moment – terrain-aware and corrected to rider height.',
+      },
+      {
+        title: 'Pick the best start time',
+        text: 'Shift your start and watch the wind change – or let Premium find the window with the most favourable wind.',
+      },
+    ],
+  },
+  features: {
+    windCost: {
+      title: 'What will the wind cost you today?',
+      text: 'Wind Cost turns the forecast into minutes: the time you lose into the wind, the time you gain with it, and the toughest stretch of the ride – calculated for your bike, your riding position and your power.',
+      bikeLabel: 'Bike',
+      bikes: ['Road', 'TT', 'Gravel', 'MTB'],
+      positionLabel: 'Position',
+      positions: ['Tops', 'Hoods', 'Drops', 'Aero'],
+      more: 'Learn more about Wind Cost',
+      alt: 'Wind Cost card: +1 minute the wind costs you on this ride; 2 min into the wind, 1 min with the wind; toughest stretch km 0–20',
+    },
+    startTime: {
+      title: 'Leave when the wind is on your side.',
+      text: 'The wind turns during the day. {name} checks your route against every start time in your window and recommends when to leave – for maximum tailwind, a balance of wind and rain, or the driest ride.',
+      more: 'Learn more about best start time',
+      alt: 'Optimal Time Window: recommended start time 07:34, better wind conditions for this route',
+    },
+    tailwind: {
+      title: 'One number for the whole ride.',
+      text: "The Tailwind Score rates your route from 0 to 100 – plus how much of it you'll ride with tailwind, crosswind and headwind. Compare routes and days at a glance.",
+      scaleLow: '0 · into the wind',
+      scaleHigh: '100 · tailwind',
+      more: 'Learn more about the Tailwind Score',
+      alt: 'Tailwind Score of a ride: 7% tailwind, 80% crosswind, 13% headwind',
+    },
+    echelon: {
+      title: 'See where the group will split.',
+      text: 'Echelon Analysis scores the crosswind risk of every sector – using surface-aware physics and land-use data – so you know where to be at the front before the race or group ride breaks apart.',
+      more: 'Learn more about crosswind & echelons',
+      alt: 'Echelon Analysis: critical sections, high-risk distance and max split risk, with the route mapped by split risk',
+    },
+    tiles: [
+      {
+        icon: 'coffee',
+        tier: 'premium',
+        title: 'Coffee stop planner',
+        text: 'Add a stop and its length – arrival times and the wind for the rest of the ride shift with it.',
+      },
+      {
+        icon: 'sync',
+        tier: 'premium',
+        title: 'Nightly Strava sync',
+        text: 'Connect Strava once – your routes arrive automatically every night.',
+      },
+      {
+        icon: 'cloud',
+        tier: 'free',
+        title: 'Multi-source weather',
+        text: 'Apple WeatherKit, DWD and Open-Meteo – the most reliable source for your region.',
+      },
+      {
+        icon: 'terrain',
+        tier: 'free',
+        title: 'Terrain-aware wind',
+        text: 'Forest, town or open land – wind is corrected for the terrain and to the height you ride at.',
+      },
+    ],
+  },
+  tiers: { free: 'Free', premium: 'Premium', beta: 'Beta' },
+  accuracy: {
+    eyebrow: 'Accuracy',
+    title: 'Free shows the trend. Premium shows every shift.',
+    text: 'The same ride from Girona to Cap de Creus, same forecast. Free averages the wind over long stretches – and the headwind north of Roses disappears into crosswind. Premium follows the route in much finer sections and shows it.',
+    free: {
+      caption: 'Coarse sections',
+      alt: 'Free: route from Girona to Cap de Creus coloured in coarse sections – only tailwind and crosswind visible',
+    },
+    premium: {
+      caption: 'Fine sections',
+      alt: 'Premium: the same route in fine sections – headwind stretches north of Roses now visible in red',
+    },
+  },
+  races: {
+    eyebrow: 'Race forecasts',
+    title: 'Real races, analysed before the start.',
+    all: 'All race forecasts',
+    cta: 'Wind forecast',
+    score: 'Tailwind Score',
+    indexTitle: 'Race wind forecasts',
+    indexIntro:
+      'Before the start we run the route of real races through {name}: where the field gets tailwind, where it splits in the crosswind, and where the headwind hurts.',
+  },
+  pricing: {
+    eyebrow: 'Free & Premium',
+    title: 'Free to start. Premium when every minute counts.',
+    billing: 'Billing period',
+    monthly: 'Monthly',
+    yearly: 'Yearly',
+    yearlyBadge: '−25%',
+    free: {
+      price: '$0',
+      text: 'Wind along your route and the Tailwind Score – for 3 plans a week.',
+      cta: 'Start for free',
+    },
+    premium: {
+      cta: 'Get Premium',
+      yearly: {
+        amount: '$44.99',
+        per: '/ year',
+        note: 'Everything in Free, plus Wind Cost, best start time, Echelon Analysis and unlimited, finer plans. Save 25% vs. monthly.',
+      },
+      monthly: {
+        amount: '$4.99',
+        per: '/ month',
+        note: 'Everything in Free, plus Wind Cost, best start time, Echelon Analysis and unlimited, finer plans. Or $44.99 a year.',
+      },
+    },
+    table: {
+      caption: 'Free and Premium compared',
+      feature: 'Feature',
+      included: 'Included',
+      notIncluded: 'Not included',
+      rows: [
+        { label: 'Wind along your route', free: true, premium: true },
+        { label: 'Tailwind Score', free: true, premium: true },
+        { label: 'Plans per week', free: '3', premium: 'Unlimited' },
+        { label: 'Route accuracy', free: 'Coarse', premium: 'Fine' },
+        { label: 'Wind Cost with bike & position', free: false, premium: true },
+        { label: 'Best start time', free: false, premium: true },
+        { label: 'Echelon Analysis (beta)', free: false, premium: true },
+        { label: 'Coffee stop planner', free: false, premium: true },
+        { label: 'Nightly Strava sync', free: false, premium: true },
+      ] as { label: string; free: boolean | string; premium: boolean | string }[],
+    },
+  },
+  faq: {
+    eyebrow: 'FAQ',
+    title: 'Questions riders ask.',
+    items: [
+      {
+        q: 'What makes {name} different from Windy or AccuWeather?',
+        a: 'Those apps show the weather at a place. {name} shows the wind along your route, at the time you reach each point – with tailwind, headwind and crosswind sections, Wind Cost and Echelon Analysis.',
+      },
+      {
+        q: 'What is Echelon Analysis?',
+        a: 'A Premium feature (beta) that brings pro-cycling tactics to your routes: it scores the crosswind risk of every sector using surface-aware physics and CORINE/OSM land-use data.',
+      },
+      {
+        q: 'Do I need an iPhone, or can I use {name} in a browser?',
+        a: 'Both work: the iOS app and the web app at {webAppHost}, with Google or Apple sign-in. Android is not available yet.',
+      },
+      {
+        q: 'Is there a free version?',
+        a: 'Yes. Route wind analysis, the Tailwind Score and route import are free for 3 plans a week. Premium adds unlimited plans, finer route sections, Wind Cost, best start time, Echelon Analysis, the coffee stop planner and nightly Strava sync.',
+      },
+      {
+        q: 'Which weather sources does {name} use?',
+        a: 'Apple WeatherKit, DWD and Open-Meteo – choosing the most reliable source per region – with wind corrected from 10 m down to rider height.',
+      },
+      {
+        q: 'Can I import my routes from Strava or Komoot?',
+        a: 'Yes. Connect your Strava account to import routes directly; Komoot routes come in via GPX. Premium syncs your Strava routes automatically every night.',
+      },
+      {
+        q: 'Is {name} only for road cycling?',
+        a: 'No. It works for gravel, MTB, triathlon, trail running and other outdoor sports where the wind matters.',
+      },
+      {
+        q: 'How accurate are the forecasts?',
+        a: 'The base forecast comes from the providers above. {name} adds terrain-aware wind, the correction to rider height, multi-source fallback per region and time-integrated precipitation.',
+      },
+    ],
+  },
+  cta: {
+    title: 'Your next ride, planned around the wind.',
+    sub: 'Free on iPhone and in your browser.',
+  },
+  footer: {
+    tagline: 'Route-based wind forecast for cyclists and triathletes.',
+    features: 'Features',
+    races: 'Race forecasts',
+    changelog: 'Changelog',
+    imprint: 'Imprint',
+    terms: 'Terms',
+    privacy: 'Privacy',
+    language: 'Language',
+  },
+  useCase: {
+    breadcrumb: 'Breadcrumb',
+    howTitle: 'How it works',
+    related: 'Related',
+    raceForecasts: 'Race forecasts',
+    windForecast: 'Wind forecast',
+  },
+  event: {
+    road: 'Road race',
+    triathlon: 'Triathlon',
+    start: 'Start',
+    stage: 'Stage',
+    intro:
+      'Where the wind will help and where it will hurt on race day – section by section, for the time the field actually rides through.',
+    weatherData: 'Weather data',
+    score: 'Tailwind Score',
+    scoreBike: 'Tailwind Score · Bike',
+    tail: 'Tail',
+    cross: 'Cross',
+    head: 'Head',
+    tailwind: 'Tailwind',
+    crosswind: 'Crosswind',
+    headwind: 'Headwind',
+    wind: 'Wind',
+    gusts: 'gusts',
+    rain: 'Rain',
+    tempStart: 'Temp at start',
+    echelonRisk: 'Echelon risk',
+    keyTakeaways: 'Key takeaways',
+    bikeTakeaways: 'Bike: key takeaways',
+    runTakeaways: 'Run: key takeaways',
+    disclaimer:
+      'The forecast was made before race day. Forecasts change until race morning – check your own route for your next ride.',
+    trainingTitle: 'Training on your own roads?',
+    trainingText: 'Import your route and see the wind for your next ride.',
+    trainingCta: 'Check your own route',
+    moreRaces: 'More race forecasts',
+    learnMore: 'Learn more',
+    mapAltSuffix: 'coloured by forecast wind',
+  },
+  changelog: {
+    eyebrow: 'Changelog',
+    title: "What's new in {name}",
+    intro: 'Every release since the App Store launch – and what we are building next.',
+    version: 'Version',
+    roadmapTitle: 'Coming soon',
+    roadmapIntro: 'We keep improving {name}. These are next on the list.',
+  },
+}
+
+export default en
