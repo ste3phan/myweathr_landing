@@ -3,6 +3,57 @@ type L = { en: string; de: string }
 
 export const versions: { version: string; date: L; items: L[] }[] = [
   {
+    version: '1.4.8',
+    date: { en: 'September 2026', de: 'September 2026' },
+    items: [
+      { en: 'Lap courses now show one lap at a time – because the wind turns between lap one and lap two', de: 'Rundkurse zeigen jetzt eine Runde nach der anderen – weil der Wind zwischen Runde eins und zwei dreht' },
+      { en: 'Laps are detected automatically and each one is shown on its own', de: 'Runden werden automatisch erkannt und einzeln angezeigt' },
+      { en: 'Lap comparison: which lap costs how many minutes (Premium)', de: 'Rundenvergleich: welche Runde wie viele Minuten kostet (Premium)' },
+      { en: "Echelon Analysis uses each lap's own wind", de: 'Die Windkanten-Analyse nutzt den Wind jeder einzelnen Runde' },
+      { en: 'Running: enter your pace in min/km instead of km/h', de: 'Laufen: Tempo in min/km statt km/h eingeben' },
+      { en: 'Now in French, Italian, Spanish and Dutch', de: 'Jetzt auch auf Französisch, Italienisch, Spanisch und Niederländisch' },
+      { en: 'Rename routes and correct the activity type', de: 'Routen umbenennen und die Sportart korrigieren' },
+      { en: '"What the wind costs": the wind in minutes for your ride (Premium)', de: '„Was der Wind kostet“: der Wind in Minuten für deine Fahrt (Premium)' },
+      { en: 'Messages in the app, more accurate wattage, fixed wind direction on shared images', de: 'Nachrichten in der App, genauere Wattwerte, korrigierte Windrichtung auf geteilten Bildern' },
+    ],
+  },
+  {
+    version: '1.4.7',
+    date: { en: 'September 2026', de: 'September 2026' },
+    items: [
+      { en: 'New: Wind Cost – how many minutes the wind adds to your ride, based on your weight, FTP, bike type and riding position', de: 'Neu: Wind Cost – wie viele Minuten der Wind deiner Fahrt hinzufügt, abgestimmt auf Gewicht, FTP, Radtyp und Sitzposition' },
+      { en: 'New: in-app messages with tips and updates', de: 'Neu: Nachrichten in der App mit Tipps und Neuigkeiten' },
+      { en: 'Improved: the Premium screen highlights Echelon Analysis; Settings show your plan status', de: 'Verbessert: Der Premium-Bildschirm stellt die Windkanten-Analyse heraus; die Einstellungen zeigen deinen Tarif' },
+      { en: 'Fixed: more accurate wind-power calculations; no more unwanted zoom on input fields', de: 'Behoben: genauere Berechnung der Windleistung; kein ungewolltes Zoomen mehr in Eingabefeldern' },
+    ],
+  },
+  {
+    version: '1.3.6',
+    date: { en: 'July 2026', de: 'Juli 2026' },
+    items: [{ en: 'Minor performance optimisations', de: 'Kleinere Performance-Verbesserungen' }],
+  },
+  {
+    version: '1.3.5',
+    date: { en: 'July 2026', de: 'Juli 2026' },
+    items: [
+      { en: 'Faster weather calculations when planning a ride', de: 'Schnellere Wetterberechnung beim Planen einer Fahrt' },
+      { en: 'Deleted Strava routes stay deleted – no more reappearing after a sync, plus a restore option in Settings', de: 'Gelöschte Strava-Routen bleiben gelöscht – kein Wiederauftauchen nach dem Sync, dazu eine Wiederherstellen-Option in den Einstellungen' },
+      { en: 'More accurate wind direction and felt wind when riding a route in reverse', de: 'Genauere Windrichtung und gefühlter Wind, wenn du eine Route rückwärts fährst' },
+      { en: "Echelon Analysis no longer flags crosswind risk on steep climbs, where echelons can't form", de: 'Die Windkanten-Analyse meldet kein Seitenwind-Risiko mehr an steilen Anstiegen, wo sich keine Windkanten bilden' },
+      { en: 'Tidier route filters – no more duplicate activity categories', de: 'Aufgeräumte Routenfilter – keine doppelten Sportarten mehr' },
+      { en: 'Various bug fixes and performance improvements', de: 'Diverse Fehlerbehebungen und Performance-Verbesserungen' },
+    ],
+  },
+  {
+    version: '1.3.4',
+    date: { en: 'July 2026', de: 'Juli 2026' },
+    items: [
+      { en: "Ride reminders: plan a ride and get an email the evening before with the forecast and a direct link to your route's wind analysis", de: 'Tour-Erinnerungen: Fahrt planen und am Vorabend eine E-Mail mit Prognose und direktem Link zur Windanalyse deiner Route bekommen' },
+      { en: 'Change your password right from Settings', de: 'Passwort direkt in den Einstellungen ändern' },
+      { en: 'Various improvements and bug fixes', de: 'Diverse Verbesserungen und Fehlerbehebungen' },
+    ],
+  },
+  {
     version: '1.2.3',
     date: { en: 'May 2026', de: 'Mai 2026' },
     items: [
@@ -59,10 +110,6 @@ export const roadmap: { title: L; text: L }[] = [
   {
     title: { en: 'Demo route for the first start', de: 'Demo-Route beim ersten Start' },
     text: { en: 'A built-in demo route so you can explore Echelon, Wind Flow Map and Tailwind Score right away – without importing anything first.', de: 'Eine eingebaute Demo-Route, damit du Windkanten, Wind Flow Map und Tailwind Score sofort ausprobieren kannst – ohne vorher etwas zu importieren.' },
-  },
-  {
-    title: { en: 'Weather reminders', de: 'Wetter-Erinnerungen' },
-    text: { en: 'An optional reminder before a planned ride if conditions shift – so you can adjust timing or route.', de: 'Eine optionale Erinnerung vor einer geplanten Fahrt, wenn sich die Bedingungen ändern – damit du Startzeit oder Route anpassen kannst.' },
   },
   {
     title: { en: 'Android app', de: 'Android-App' },
