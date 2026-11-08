@@ -48,6 +48,10 @@ console.log(`sitemap.xml: ${urls.length} URLs`)
 const en = Object.fromEntries(features.en.map((u) => [u.id, u]))
 const de = Object.fromEntries(features.de.map((u) => [u.id, u]))
 const NAME = 'myweathr'
+// Latest release = first entry in content/changelog.ts
+const cl = fs.readFileSync(path.join(root, 'content/changelog.ts'), 'utf8')
+const latest = cl.match(/version: '([^']+)',\s*date: \{ en: '([^']+)'/)
+if (!latest) throw new Error('llms.txt: no version found in content/changelog.ts')
 const fill = (s) => s.replace(/\{name\}/g, NAME)
 const llms = `# ${NAME}
 
@@ -59,8 +63,8 @@ Key facts:
 - Weather sources: Apple WeatherKit, DWD and Open-Meteo, picking the most reliable source per region; wind corrected from 10 m to rider height and for terrain (forest, town, open land).
 - Free: wind along the route, Tailwind Score and route import for 3 plans per week, coarse route sections.
 - Premium: unlimited plans, finer route sections, Wind Cost (bike type and riding position), best start time, Echelon Analysis (beta), coffee stop planner, nightly Strava sync. USD 4.99/month or 44.99/year; EUR 5.99/month or 49.99/year.
-- Works for road cycling, gravel, MTB, triathlon and trail running.
-- Languages: English (/en/) and German (/de/).
+- Works for road cycling, gravel, MTB, triathlon and trail running (pace in min/km for runners); lap courses are split into laps, each with its own wind.
+- Current app version: ${latest[1]} (${latest[2]}). App languages: English, German, French, Italian, Spanish, Dutch. Website languages: English (/en/) and German (/de/).
 
 ## Features
 
