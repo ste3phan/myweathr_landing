@@ -17,6 +17,10 @@ export type Race = {
   breadcrumb: L
   date: string
   startTime: string
+  /** Local UTC offset on race day, e.g. +02:00 (CEST) */
+  utcOffset: string
+  venue: { name: string; locality: string; region: string; country: string }
+  organizer: { name: string; url: string }
   distances: { label: L; km: number }[]
   note: L
   image: string

@@ -18,7 +18,6 @@ export default function RootRedirect() {
           <link key={l} rel="alternate" hrefLang={l} href={`${site.url}/${l}/`} />
         ))}
         <link rel="alternate" hrefLang="x-default" href={`${site.url}/${DEFAULT_LANG}/`} />
-        <meta name="robots" content="noindex, follow" />
         <script dangerouslySetInnerHTML={{ __html: script }} />
       </Head>
       <p style={{ padding: 24, fontFamily: 'system-ui, sans-serif' }}>

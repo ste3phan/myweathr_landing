@@ -21,6 +21,17 @@
   },
   "date": "2026-07-04",
   "startTime": "18:45",
+  "utcOffset": "+02:00",
+  "venue": {
+    "name": "Barcelona",
+    "locality": "Barcelona",
+    "region": "Catalonia",
+    "country": "ES"
+  },
+  "organizer": {
+    "name": "Amaury Sport Organisation (A.S.O.)",
+    "url": "https://www.letour.fr"
+  },
   "distances": [],
   "note": {
     "en": "40% headwind – the southerly off the Mediterranean, then Montjuïc.",

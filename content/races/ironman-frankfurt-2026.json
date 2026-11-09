@@ -21,6 +21,17 @@
   },
   "date": "2026-06-28",
   "startTime": "08:00",
+  "utcOffset": "+02:00",
+  "venue": {
+    "name": "Frankfurt am Main",
+    "locality": "Frankfurt am Main",
+    "region": "Hessen",
+    "country": "DE"
+  },
+  "organizer": {
+    "name": "The IRONMAN Group",
+    "url": "https://www.ironman.com"
+  },
   "distances": [
     {
       "label": {

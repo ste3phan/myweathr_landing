@@ -21,6 +21,17 @@
   },
   "date": "2026-09-02",
   "startTime": "14:08",
+  "utcOffset": "+02:00",
+  "venue": {
+    "name": "Cartagena",
+    "locality": "Cartagena",
+    "region": "Región de Murcia",
+    "country": "ES"
+  },
+  "organizer": {
+    "name": "Unipublic",
+    "url": "https://www.lavuelta.es"
+  },
   "distances": [],
   "note": {
     "en": "54% tailwind from the east. Echelon risk: low.",
