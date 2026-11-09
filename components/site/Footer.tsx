@@ -46,16 +46,15 @@ export default function Footer({ lang, t, useCases, raceLinks, alternates }: Pro
             <Link href={`/${lang}/changelog/`} className={a}>
               {t.footer.changelog}
             </Link>
-            {/* Legal pages exist once (English) at the site root. */}
-            <a href="/imprint/" className={a}>
+            <Link href={`/${lang}/imprint/`} className={a}>
               {t.footer.imprint}
-            </a>
-            <a href="/terms/" className={a}>
+            </Link>
+            <Link href={`/${lang}/terms/`} className={a}>
               {t.footer.terms}
-            </a>
-            <a href="/privacy/" className={a}>
+            </Link>
+            <Link href={`/${lang}/privacy/`} className={a}>
               {t.footer.privacy}
-            </a>
+            </Link>
           </nav>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-5 border-t border-line pt-6">

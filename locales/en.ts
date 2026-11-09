@@ -276,6 +276,17 @@ const en = {
     learnMore: 'Learn more',
     mapAltSuffix: 'coloured by forecast wind',
   },
+  legal: {
+    imprint: 'Imprint',
+    terms: 'Terms of Use',
+    privacy: 'Privacy Policy',
+    deleteAccount: 'Delete your account',
+    deleteAccountDescription: 'How to delete your {name} account and what happens to your data.',
+    imprintDescription: 'Legal notice and contact details for {name}.',
+    termsDescription: 'Terms of Use for the {name} app and web app.',
+    privacyDescription: 'How {name} collects, uses and protects your data.',
+    englishOnly: '',
+  },
   changelog: {
     eyebrow: 'Changelog',
     title: "What's new in {name}",

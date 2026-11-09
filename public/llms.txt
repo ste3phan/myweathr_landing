@@ -32,6 +32,6 @@ Key facts:
 
 ## Optional
 
-- [Privacy policy](https://myweathr.io/privacy/)
-- [Terms](https://myweathr.io/terms/)
-- [Imprint](https://myweathr.io/imprint/)
+- [Privacy policy](https://myweathr.io/en/privacy/)
+- [Terms](https://myweathr.io/en/terms/)
+- [Imprint](https://myweathr.io/en/imprint/)

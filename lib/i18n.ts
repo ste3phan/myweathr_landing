@@ -14,6 +14,8 @@ export const ALL_LANGS = [
 export const AVAILABLE_LANGS = ['en', 'de'] as const
 export type Lang = (typeof AVAILABLE_LANGS)[number]
 export const DEFAULT_LANG: Lang = 'en'
+/** localStorage key: language the visitor last viewed (used by the / redirect). */
+export const LANG_STORAGE_KEY = 'mw-lang'
 
 export function isLang(x: unknown): x is Lang {
   return typeof x === 'string' && (AVAILABLE_LANGS as readonly string[]).includes(x)

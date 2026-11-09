@@ -17,6 +17,7 @@ const groups = [
   Object.fromEntries(LANGS.map((l) => [l, `/${l}/`])),
   Object.fromEntries(LANGS.map((l) => [l, `/${l}/races/`])),
   Object.fromEntries(LANGS.map((l) => [l, `/${l}/changelog/`])),
+  ...['imprint', 'terms', 'privacy', 'delete-account'].map((p) => Object.fromEntries(LANGS.map((l) => [l, `/${l}/${p}/`]))),
   ...races.map((r) => Object.fromEntries(LANGS.map((l) => [l, `/${l}/races/${r.slug}/`]))),
   ...features.en.map((u) =>
     Object.fromEntries(
@@ -34,7 +35,6 @@ const urls = groups.flatMap((g) =>
     return `  <url>\n    <loc>${SITE}${loc}</loc>\n${alts}\n  </url>`
   })
 )
-for (const p of ['/imprint/', '/terms/', '/privacy/']) urls.push(`  <url>\n    <loc>${SITE}${p}</loc>\n  </url>`)
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -82,9 +82,9 @@ ${races.map((r) => `- [${r.name.en}](${SITE}/en/races/${r.slug}/): ${r.note.en} 
 
 ## Optional
 
-- [Privacy policy](${SITE}/privacy/)
-- [Terms](${SITE}/terms/)
-- [Imprint](${SITE}/imprint/)
+- [Privacy policy](${SITE}/en/privacy/)
+- [Terms](${SITE}/en/terms/)
+- [Imprint](${SITE}/en/imprint/)
 `
 fs.writeFileSync(path.join(root, 'public/llms.txt'), llms)
 console.log('llms.txt written')

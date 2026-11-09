@@ -276,6 +276,17 @@ const de: typeof en = {
     learnMore: 'Mehr erfahren',
     mapAltSuffix: 'nach prognostiziertem Wind eingefärbt',
   },
+  legal: {
+    imprint: 'Impressum',
+    terms: 'Nutzungsbedingungen',
+    privacy: 'Datenschutzerklärung',
+    deleteAccount: 'Konto löschen',
+    deleteAccountDescription: 'So löschst du dein {name}-Konto und das passiert mit deinen Daten.',
+    imprintDescription: 'Impressum und Kontakt von {name}.',
+    termsDescription: 'Nutzungsbedingungen für die {name}-App und Web-App.',
+    privacyDescription: 'Wie {name} deine Daten erhebt, nutzt und schützt.',
+    englishOnly: 'Dieser Text liegt derzeit nur auf Englisch vor.',
+  },
   changelog: {
     eyebrow: 'Changelog',
     title: 'Neu in {name}',

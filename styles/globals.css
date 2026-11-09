@@ -368,6 +368,19 @@
     border-color: var(--brand);
   }
 
+  /* Legal texts */
+  .legal {
+    color: var(--fg-2);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .legal h2,
+  .legal h3,
+  .legal strong,
+  .legal th {
+    color: var(--fg);
+  }
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
