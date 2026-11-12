@@ -35,6 +35,8 @@ export type Race = {
   tempC: number | null
   echelonRisk: L | null
   weatherSource: string | null
+  /** Optional: the Instagram post with this analysis */
+  instagramUrl?: string
   sections: { leg: 'bike' | 'run'; fromKm: number; toKm: number; wind: 'tail' | 'cross' | 'head'; text: L }[]
   relatedFeatures: string[]
 }

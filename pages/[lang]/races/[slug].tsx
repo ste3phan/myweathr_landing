@@ -133,9 +133,18 @@ export default function RacePage({ lang, chrome, race, others, features }: Props
             <h1 className="h1-page">{h1}</h1>
             <p className="m-0 text-lg font-bold text-fg-2 sm:text-xl">{race.name[lang]}</p>
             <p className="m-0 max-w-[52ch] text-lg leading-[1.55] text-fg-2 sm:text-xl">{t.event.intro}</p>
-            {race.weatherSource && (
-              <span className="text-sm text-muted">
-                {t.event.weatherData}: {race.weatherSource}
+            {(race.weatherSource || race.instagramUrl) && (
+              <span className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted">
+                {race.weatherSource && (
+                  <span>
+                    {t.event.weatherData}: {race.weatherSource}
+                  </span>
+                )}
+                {race.instagramUrl && (
+                  <a href={race.instagramUrl} className="link font-semibold">
+                    {t.event.instagram} ↗
+                  </a>
+                )}
               </span>
             )}
           </div>

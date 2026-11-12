@@ -250,6 +250,7 @@ const en = {
     stage: 'Stage',
     intro:
       'Where the wind will help and where it will hurt on race day – section by section, for the time the field actually rides through.',
+    instagram: 'Analysis on Instagram',
     weatherData: 'Weather data',
     score: 'Tailwind Score',
     scoreBike: 'Tailwind Score · Bike',

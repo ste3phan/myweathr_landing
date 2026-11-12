@@ -85,6 +85,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/delete-account/"/>
   </url>
   <url>
+    <loc>https://myweathr.io/en/races/t100-dubai-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/t100-dubai-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/t100-dubai-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/t100-dubai-2026/"/>
+  </url>
+  <url>
+    <loc>https://myweathr.io/de/races/t100-dubai-2026/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/t100-dubai-2026/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/t100-dubai-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://myweathr.io/en/races/t100-dubai-2026/"/>
+  </url>
+  <url>
     <loc>https://myweathr.io/en/races/tour-de-france-2026-stage-1/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://myweathr.io/en/races/tour-de-france-2026-stage-1/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://myweathr.io/de/races/tour-de-france-2026-stage-1/"/>

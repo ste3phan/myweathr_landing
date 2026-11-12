@@ -20,6 +20,7 @@ Key facts:
 
 ## Race wind forecasts
 
+- [T100 Dubai 2026 · Bike 80 km](https://myweathr.io/en/races/t100-dubai-2026/): No shelter, no free ride: 80 km along the coast with the wind from the north-west. Tailwind Score 50/100.
 - [Tour de France 2026 · Stage 1 · Barcelona](https://myweathr.io/en/races/tour-de-france-2026-stage-1/): 40% headwind – the southerly off the Mediterranean, then Montjuïc. Tailwind Score 31/100.
 - [La Vuelta 2026 · Stage 11 · Cartagena → Lorca](https://myweathr.io/en/races/vuelta-2026-stage-11/): 54% tailwind from the east. Echelon risk: low. Tailwind Score 63/100.
 - [Ironman Frankfurt 2026 · Bike 180 km](https://myweathr.io/en/races/ironman-frankfurt-2026/): 56% crosswind from the west, gusts up to 22 km/h. Tailwind Score 45/100.

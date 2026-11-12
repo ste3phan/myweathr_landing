@@ -61,5 +61,5 @@ export const getStaticPaths: GetStaticPaths = async () => ({ paths: langPaths(),
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const lang = params!.lang as Lang
-  return { props: { lang, chrome: getChrome(lang), races: getRaces() } }
+  return { props: { lang, chrome: getChrome(lang), races: getRaces().slice(0, 3) } }
 }

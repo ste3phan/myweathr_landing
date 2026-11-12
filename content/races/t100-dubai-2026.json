@@ -1,0 +1,40 @@
+{
+  "slug": "t100-dubai-2026",
+  "order": 0,
+  "type": "triathlon",
+  "series": "T100 Dubai 2026",
+  "shortName": { "en": "T100 Dubai", "de": "T100 Dubai" },
+  "name": { "en": "T100 Dubai 2026 · Bike 80 km", "de": "T100 Dubai 2026 · Rad 80 km" },
+  "cardTitle": { "en": "Bike course · 80 km", "de": "Radstrecke · 80 km" },
+  "breadcrumb": { "en": "T100 Dubai", "de": "T100 Dubai" },
+  "date": "2026-11-14",
+  "startTime": "10:27",
+  "utcOffset": "+04:00",
+  "venue": { "name": "Al Mamzar", "locality": "Dubai", "region": "Dubai", "country": "AE" },
+  "organizer": { "name": "Professional Triathletes Organisation (PTO)", "url": "https://stats.protriathletes.org" },
+  "distances": [
+    { "label": { "en": "Bike", "de": "Rad" }, "km": 80 }
+  ],
+  "note": {
+    "en": "No shelter, no free ride: 80 km along the coast with the wind from the north-west.",
+    "de": "Kein Windschatten, nichts geschenkt: 80 km an der Küste, Wind aus Nordwest."
+  },
+  "image": "/images/races/t100-dubai-2026.png",
+  "imageWidth": 1080,
+  "imageHeight": 675,
+  "imageAlt": {
+    "en": "T100 Dubai 2026 bike course from Al Mamzar along the coast to Deira, coloured by forecast wind",
+    "de": "T100 Dubai 2026, Radstrecke von Al Mamzar entlang der Küste nach Deira, nach prognostiziertem Wind eingefärbt"
+  },
+  "tailwindScore": 50,
+  "shares": { "tail": null, "cross": null, "head": null },
+  "windDirection": "NW",
+  "gustsKmh": 13,
+  "rainPct": null,
+  "tempC": 28,
+  "echelonRisk": null,
+  "weatherSource": "Apple Weather",
+  "instagramUrl": "https://www.instagram.com/p/DfowL3ijt2c/",
+  "sections": [],
+  "relatedFeatures": ["plan-ride", "best-start-time"]
+}

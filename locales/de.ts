@@ -250,6 +250,7 @@ const de: typeof en = {
     stage: 'Etappe',
     intro:
       'Wo der Wind am Renntag hilft und wo er wehtut – Abschnitt für Abschnitt, zu der Uhrzeit, zu der das Feld wirklich dort ist.',
+    instagram: 'Analyse auf Instagram',
     weatherData: 'Wetterdaten',
     score: 'Tailwind Score',
     scoreBike: 'Tailwind Score · Rad',
