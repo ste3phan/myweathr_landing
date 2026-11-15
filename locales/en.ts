@@ -147,7 +147,7 @@ const en = {
     billing: 'Billing period',
     monthly: 'Monthly',
     yearly: 'Yearly',
-    yearlyBadge: '−25%',
+    yearlyBadge: '−37%',
     free: {
       price: '$0',
       text: 'Wind along your route and the Tailwind Score – for 3 plans a week.',
@@ -156,14 +156,14 @@ const en = {
     premium: {
       cta: 'Get Premium',
       yearly: {
-        amount: '$44.99',
+        amount: '$29.99',
         per: '/ year',
-        note: 'Everything in Free, plus Wind Cost, best start time, Echelon Analysis and unlimited, finer plans. Save 25% vs. monthly.',
+        note: 'Everything in Free, plus Wind Cost, best start time, Echelon Analysis and unlimited, finer plans. Save 37% vs. monthly.',
       },
       monthly: {
-        amount: '$4.99',
+        amount: '$3.99',
         per: '/ month',
-        note: 'Everything in Free, plus Wind Cost, best start time, Echelon Analysis and unlimited, finer plans. Or $44.99 a year.',
+        note: 'Everything in Free, plus Wind Cost, best start time, Echelon Analysis and unlimited, finer plans. Or $29.99 a year.',
       },
     },
     table: {

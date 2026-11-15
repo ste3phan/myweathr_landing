@@ -147,7 +147,7 @@ const de: typeof en = {
     billing: 'Abrechnungszeitraum',
     monthly: 'Monatlich',
     yearly: 'Jährlich',
-    yearlyBadge: '−30 %',
+    yearlyBadge: '−37 %',
     free: {
       price: '0 €',
       text: 'Wind entlang der Route und Tailwind Score – für 3 Planungen pro Woche.',
@@ -156,14 +156,14 @@ const de: typeof en = {
     premium: {
       cta: 'Premium holen',
       yearly: {
-        amount: '49,99 €',
+        amount: '29,99 €',
         per: '/ Jahr',
-        note: 'Alles aus Kostenlos, dazu Wind Cost, beste Startzeit, Windkanten-Analyse und unbegrenzte, feinere Planungen. Rund 30 % günstiger als monatlich.',
+        note: 'Alles aus Kostenlos, dazu Wind Cost, beste Startzeit, Windkanten-Analyse und unbegrenzte, feinere Planungen. Rund 37 % günstiger als monatlich.',
       },
       monthly: {
-        amount: '5,99 €',
+        amount: '3,99 €',
         per: '/ Monat',
-        note: 'Alles aus Kostenlos, dazu Wind Cost, beste Startzeit, Windkanten-Analyse und unbegrenzte, feinere Planungen. Oder 49,99 € im Jahr.',
+        note: 'Alles aus Kostenlos, dazu Wind Cost, beste Startzeit, Windkanten-Analyse und unbegrenzte, feinere Planungen. Oder 29,99 € im Jahr.',
       },
     },
     table: {
