@@ -3,6 +3,17 @@ type L = { en: string; de: string }
 
 export const versions: { version: string; date: L; items: L[] }[] = [
   {
+    version: '1.4.9',
+    date: { en: 'November 2026', de: 'November 2026' },
+    items: [
+      { en: 'New, lower prices: Premium now €3.99/month or €29.99/year ($3.99 / $29.99) – existing subscriptions renew at the lower price automatically', de: 'Neue, günstigere Preise: Premium kostet jetzt 3,99 € im Monat oder 29,99 € im Jahr – bestehende Abos verlängern sich automatisch zum niedrigeren Preis' },
+      { en: 'Help & FAQ in all six languages – the ? next to a feature jumps straight to its explanation', de: 'Hilfe & FAQ in allen sechs Sprachen – das ? neben einer Funktion führt direkt zur passenden Erklärung' },
+      { en: 'Clearer rain chart: rain in mm/h on a scale that shows light rain too, chance of rain as a line, cloud cover as a band', de: 'Übersichtlicheres Regendiagramm: Regen in mm/h auf einer Skala, die auch leichten Regen zeigt, Regenwahrscheinlichkeit als Linie, Bewölkung als Band' },
+      { en: 'Out-and-back routes are split into way out and way back, each with its own wind', de: 'Hin-und-zurück-Strecken werden in Hinweg und Rückweg geteilt, jeweils mit eigenem Wind' },
+      { en: 'More realistic wind cost with an MTB, faster wind cost calculation, version number in Settings', de: 'Realistischere Windkosten mit dem MTB, schnellere Windkosten-Berechnung, Versionsnummer in den Einstellungen' },
+    ],
+  },
+  {
     version: '1.4.8',
     date: { en: 'September 2026', de: 'September 2026' },
     items: [
