@@ -9,7 +9,7 @@ const json = (f) => JSON.parse(fs.readFileSync(f, 'utf8'))
 const list = (dir) =>
   fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => json(path.join(dir, f))).sort((a, b) => a.order - b.order)
 
-const races = list(path.join(root, 'content/races'))
+const races = list(path.join(root, 'content/races')).sort((a, b) => b.date.localeCompare(a.date) || a.order - b.order)
 const features = Object.fromEntries(LANGS.map((l) => [l, list(path.join(root, 'content/features', l))]))
 
 /** groups: each entry = { [lang]: path } so hreflang alternates are listed per URL */

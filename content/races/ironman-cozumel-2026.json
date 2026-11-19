@@ -1,0 +1,41 @@
+{
+  "slug": "ironman-cozumel-2026",
+  "order": 0,
+  "type": "triathlon",
+  "series": "IRONMAN Cozumel 2026",
+  "shortName": { "en": "IRONMAN Cozumel", "de": "IRONMAN Cozumel" },
+  "name": { "en": "IRONMAN Cozumel 2026 · Latin American Championship · Bike 180 km", "de": "IRONMAN Cozumel 2026 · Lateinamerika-Meisterschaft · Rad 180 km" },
+  "cardTitle": { "en": "Bike course · 180 km", "de": "Radstrecke · 180 km" },
+  "breadcrumb": { "en": "IRONMAN Cozumel", "de": "IRONMAN Cozumel" },
+  "date": "2026-11-22",
+  "startTime": "07:45",
+  "utcOffset": "-05:00",
+  "venue": { "name": "Chankanaab, Cozumel", "locality": "Cozumel", "region": "Quintana Roo", "country": "MX" },
+  "organizer": { "name": "The IRONMAN Group", "url": "https://www.ironman.com" },
+  "distances": [
+    { "label": { "en": "Bike", "de": "Rad" }, "km": 180 },
+    { "label": { "en": "Run", "de": "Laufen" }, "km": 42.2 }
+  ],
+  "note": {
+    "en": "A rumour of wind: a light easterly, gusts up to 8 km/h. Over three laps the heat decides, not the wind.",
+    "de": "Ein Gerücht von Wind: leichter Ostwind, Böen bis 8 km/h. Über drei Runden entscheidet die Hitze, nicht der Wind."
+  },
+  "image": "/images/races/ironman-cozumel-2026.png",
+  "imageWidth": 1080,
+  "imageHeight": 675,
+  "imageAlt": {
+    "en": "IRONMAN Cozumel 2026 bike course, a lap of the island coloured by forecast wind – green tailwind across the island, crosswind and short headwind stretches in the south",
+    "de": "IRONMAN Cozumel 2026, Radstrecke als Runde um die Insel nach prognostiziertem Wind eingefärbt – grüner Rückenwind quer über die Insel, Seiten- und kurze Gegenwindabschnitte im Süden"
+  },
+  "tailwindScore": 54,
+  "shares": { "tail": 26, "cross": 61, "head": 13 },
+  "windDirection": "E",
+  "gustsKmh": 8.3,
+  "rainPct": 4,
+  "tempC": 26.7,
+  "echelonRisk": null,
+  "weatherSource": "Apple Weather",
+  "instagramUrl": "https://www.instagram.com/p/Df6t7eTjhTs/",
+  "sections": [],
+  "relatedFeatures": ["plan-ride", "best-start-time"]
+}

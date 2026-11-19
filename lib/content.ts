@@ -72,7 +72,8 @@ export function getRaces(): Race[] {
     .readdirSync(dir)
     .filter((f) => f.endsWith('.json'))
     .map((f) => readJson<Race>(path.join(dir, f)))
-    .sort((a, b) => a.order - b.order)
+    // Newest race first; `order` only breaks ties on the same day.
+    .sort((a, b) => b.date.localeCompare(a.date) || a.order - b.order)
 }
 
 export function getUseCases(lang: Lang): UseCase[] {
