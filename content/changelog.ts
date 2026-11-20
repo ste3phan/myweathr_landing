@@ -3,6 +3,17 @@ type L = { en: string; de: string }
 
 export const versions: { version: string; date: L; items: L[] }[] = [
   {
+    version: '1.5.0',
+    date: { en: 'November 2026', de: 'November 2026' },
+    items: [
+      { en: 'Demo route for new users: Cap de Formentor (Mallorca) with every Premium feature unlocked – try it before importing your own route', de: 'Demoroute für neue Nutzer: Cap de Formentor (Mallorca) mit allen Premium-Funktionen – ausprobieren, bevor du eine eigene Route importierst' },
+      { en: 'Start time in local time at the route start: 07:00 at Ironman Cozumel means 07:00 in Cozumel, with a hint when your time zone differs', de: 'Startzeit in der Ortszeit am Routenstart: 07:00 beim Ironman Cozumel heißt 07:00 in Cozumel, mit Hinweis, wenn deine Zeitzone abweicht' },
+      { en: 'More reliable forecasts: if a weather service fails, the next one steps in (Germany: DWD → Apple → Open-Meteo)', de: 'Zuverlässigere Vorhersagen: Fällt ein Wetterdienst aus, springt der nächste ein (Deutschland: DWD → Apple → Open-Meteo)' },
+      { en: 'Quicker planning: native time picker, speed as “− 20 +”, more compact on the phone', de: 'Schneller planen: natives Zeitfeld, Geschwindigkeit als „− 20 +“, kompakter auf dem Handy' },
+      { en: 'Sunrise and sunset are now correct for routes in other time zones', de: 'Sonnenauf- und -untergang stimmen jetzt auch für Routen in anderen Zeitzonen' },
+    ],
+  },
+  {
     version: '1.4.9',
     date: { en: 'November 2026', de: 'November 2026' },
     items: [
