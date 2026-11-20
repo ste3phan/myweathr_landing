@@ -3,7 +3,7 @@ export default function PrivacyContent({ lang }) {
   return (
     <>
     <h1 className="h1-page mb-4 !text-[clamp(34px,4.6vw,56px)]">Privacy Policy for myweathr.io</h1>
-    <p className="text-muted mb-8">Last Updated: June 2026</p>
+    <p className="text-muted mb-8">Last Updated: November 2026</p>
     
     <div className="legal max-w-none space-y-8">
 
@@ -108,6 +108,20 @@ export default function PrivacyContent({ lang }) {
         <p className="text-fg-2 leading-relaxed mt-3">
           <strong>Reminder emails are strictly opt-in</strong> and sent only the evening before a planned ride. Each email contains a short weather summary for the route start, a deep link back into the app, and a one-click unsubscribe link. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time.
         </p>
+
+        <h3 className="text-xl font-medium mb-2 mt-4">2.11 Current Location (“Weather here”)</h3>
+        <p className="text-fg-2 leading-relaxed">
+          On the home screen you can optionally see the current weather where you are. Your location is only requested when you tap “Weather here”, and only with your permission (iOS: “While Using the App”, approximate location is enough).
+        </p>
+        <ul className="list-disc list-inside text-fg-2 mt-2 space-y-1">
+          <li>The position is rounded on your device to about 1 km before it is used.</li>
+          <li>It is used only to fetch the current weather (via our weather providers, see 4.8) and the name of your town: in the iOS app via Apple's geocoding service, on the web via OpenStreetMap Nominatim (see 4.3 and 4.9).</li>
+          <li>We do not store your location on our servers and never link it to your account. The town name is cached on your device only.</li>
+          <li>You can withdraw the permission at any time in your device settings (iOS: Settings → myweathr → Location).</li>
+        </ul>
+        <p className="text-fg-2 leading-relaxed mt-3">
+          Legal basis: your consent (Art. 6(1)(a) GDPR) given through the system permission prompt.
+        </p>
       </section>
 
       <section>
@@ -142,7 +156,7 @@ export default function PrivacyContent({ lang }) {
 
         <h3 className="text-xl font-medium mb-2 mt-4">4.3 Apple (App Store &amp; Sign-In)</h3>
         <p className="text-fg-2 leading-relaxed">
-          Processes iOS app purchases and provides Sign in with Apple.<br />
+          Processes iOS app purchases and provides Sign in with Apple. In the iOS app, Apple's geocoding service also turns your rounded location into a town name for “Weather here” (see 2.11).<br />
           Privacy Policy: <a href="https://www.apple.com/legal/privacy/" className="link underline">https://www.apple.com/legal/privacy/</a>
         </p>
 
@@ -177,9 +191,9 @@ export default function PrivacyContent({ lang }) {
           <li><strong>Open-Meteo</strong>: Fallback weather data provider, also used to fetch the short forecast included in reminder emails (no personal data shared)</li>
         </ul>
 
-        <h3 className="text-xl font-medium mb-2 mt-4">4.9 OpenStreetMap / Overpass</h3>
+        <h3 className="text-xl font-medium mb-2 mt-4">4.9 OpenStreetMap (Map, Overpass, Nominatim)</h3>
         <p className="text-fg-2 leading-relaxed">
-          We query OpenStreetMap data via the Overpass API to estimate road surface roughness along your route. Only anonymous bounding-box coordinates are sent — no account or personal data.<br />
+          Map tiles are loaded from OpenStreetMap servers. We query OpenStreetMap data via the Overpass API to estimate road surface roughness along your route; only anonymous bounding-box coordinates are sent — no account or personal data. On the web, the town name for “Weather here” comes from OpenStreetMap Nominatim; only the rounded position (about 1 km) is sent. As with any web request, these services receive your IP address.<br />
           Privacy Policy: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" className="link underline">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a>
         </p>
 
@@ -291,6 +305,7 @@ export default function PrivacyContent({ lang }) {
               <tr className="border-b border-line"><td className="py-2 pr-4">Preferences</td><td className="py-2 pr-4">Personalization</td><td className="py-2">Until account deletion</td></tr>
               <tr className="border-b border-line"><td className="py-2 pr-4">Subscription status</td><td className="py-2 pr-4">Premium features</td><td className="py-2">Until account deletion</td></tr>
               <tr className="border-b border-line"><td className="py-2 pr-4">Tour plans &amp; reminder consent</td><td className="py-2 pr-4">Email reminders the evening before a ride</td><td className="py-2">Until deletion / opt-out</td></tr>
+              <tr className="border-b border-line"><td className="py-2 pr-4">Current location (optional)</td><td className="py-2 pr-4">“Weather here” on the home screen</td><td className="py-2">Not stored on our servers; town name cached on your device</td></tr>
               <tr><td className="py-2 pr-4">Weather requests</td><td className="py-2 pr-4">Rate limiting</td><td className="py-2">1 week</td></tr>
             </tbody>
           </table>
