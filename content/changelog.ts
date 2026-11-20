@@ -3,6 +3,18 @@ type L = { en: string; de: string }
 
 export const versions: { version: string; date: L; items: L[] }[] = [
   {
+    version: '1.6.0',
+    date: { en: 'November 2026', de: 'November 2026' },
+    items: [
+      { en: 'Route at a glance: score, what the wind costs and the best start time right above the map', de: 'Route auf einen Blick: Score, was der Wind kostet und die beste Startzeit direkt über der Karte' },
+      { en: '“Weather here” on the home screen: temperature, feels-like, wind and gusts where you are – your location is rounded to about 1 km and never linked to your account', de: '„Wetter hier“ auf der Startseite: Temperatur, gefühlte Temperatur, Wind und Böen an deinem Standort – auf etwa 1 km gerundet und nie mit deinem Konto verknüpft' },
+      { en: 'Coffee stops right on the map: tap ☕, then the route, pick 10, 20 or 30 minutes (Premium)', de: 'Kaffeepausen direkt auf der Karte: ☕ antippen, dann die Route, 10, 20 oder 30 Minuten wählen (Premium)' },
+      { en: 'Animated wind on the map and arrows that show the riding direction', de: 'Animierter Wind auf der Karte und Pfeile, die die Fahrtrichtung zeigen' },
+      { en: 'Reversing a route now recalculates everything for the way you actually ride: forecast times, Tailwind Score and best start time', de: 'Route umkehren rechnet jetzt alles für die tatsächliche Fahrtrichtung neu: Uhrzeiten der Vorhersage, Tailwind Score und beste Startzeit' },
+      { en: 'Strava connected? Fetch new routes with one tap; times follow your device format (14:00 or 2:00 PM)', de: 'Strava verbunden? Neue Routen mit einem Tipp holen; Uhrzeiten im Format deines Geräts (14:00 oder 2:00 PM)' },
+    ],
+  },
+  {
     version: '1.5.0',
     date: { en: 'November 2026', de: 'November 2026' },
     items: [
