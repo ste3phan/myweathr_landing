@@ -123,16 +123,16 @@ export default function PrivacyContent({ lang }) {
           Legal basis: your consent (Art. 6(1)(a) GDPR) given through the system permission prompt.
         </p>
 
-        <h3 className="text-xl font-medium mb-2 mt-4">2.12 Written Ride Briefing (AI, Premium)</h3>
+        <h3 className="text-xl font-medium mb-2 mt-4">2.12 Written Ride Briefing (AI)</h3>
         <p className="text-fg-2 leading-relaxed">
-          For Premium users, myweathr can sum up the daily ride briefing in one sentence, in the tone you choose (“cheeky” or “matter-of-fact”). We store your tone choice on your profile.
+          For Premium users – and for free users on their first three days with a briefing, as a preview – myweathr can sum up the daily ride briefing in one sentence, in the tone you choose (“cheeky” or “matter-of-fact”). We store your tone choice on your profile.
         </p>
         <ul className="list-disc list-inside text-fg-2 mt-2 space-y-1">
           <li>To write the sentence, our server sends only weather facts to Anthropic (see 4.11): times, temperatures, rain, warnings, your tone and app language. No location, no name, no e-mail address and no other personal data.</li>
           <li>For each request we log the date, your user ID, the tone, the language, the number of tokens, the cost and whether it succeeded – for cost control, abuse limits (a daily maximum) and quality monitoring. The generated sentence itself is not stored on our servers; it is cached on your device for the day.</li>
         </ul>
         <p className="text-fg-2 leading-relaxed mt-3">
-          Legal basis: performance of the Premium subscription (Art. 6(1)(b) GDPR) and our legitimate interest in cost control and abuse prevention (Art. 6(1)(f) GDPR).
+          Legal basis: performance of our contract with you – the Premium subscription or the free preview (Art. 6(1)(b) GDPR) – and our legitimate interest in cost control and abuse prevention (Art. 6(1)(f) GDPR).
         </p>
       </section>
 
@@ -211,7 +211,7 @@ export default function PrivacyContent({ lang }) {
 
         <h3 className="text-xl font-medium mb-2 mt-4">4.11 Anthropic (AI Text Generation)</h3>
         <p className="text-fg-2 leading-relaxed">
-          Anthropic, PBC (USA) writes the one-sentence ride briefing for Premium users via its Claude API. It receives only the weather facts described in 2.12 – no personal data. Anthropic does not use API data to train its models. Transfers to the USA are covered by the EU Standard Contractual Clauses.<br />
+          Anthropic, PBC (USA) writes the one-sentence ride briefing (Premium and free preview) via its Claude API. It receives only the weather facts described in 2.12 – no personal data. Anthropic does not use API data to train its models. Transfers to the USA are covered by the EU Standard Contractual Clauses.<br />
           Privacy Policy: <a href="https://www.anthropic.com/legal/privacy" className="link underline">https://www.anthropic.com/legal/privacy</a>
         </p>
 
