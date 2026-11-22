@@ -122,6 +122,18 @@ export default function PrivacyContent({ lang }) {
         <p className="text-fg-2 leading-relaxed mt-3">
           Legal basis: your consent (Art. 6(1)(a) GDPR) given through the system permission prompt.
         </p>
+
+        <h3 className="text-xl font-medium mb-2 mt-4">2.12 Written Ride Briefing (AI)</h3>
+        <p className="text-fg-2 leading-relaxed">
+          For Premium users – and for free users on their first three days with a briefing, as a preview – myweathr can sum up the daily ride briefing in one sentence, in the tone you choose (“cheeky” or “matter-of-fact”). We store your tone choice on your profile.
+        </p>
+        <ul className="list-disc list-inside text-fg-2 mt-2 space-y-1">
+          <li>To write the sentence, our server sends only weather facts to Anthropic (see 4.11): times, temperatures, rain, warnings, your tone and app language. No location, no name, no e-mail address and no other personal data.</li>
+          <li>For each request we log the date, your user ID, the tone, the language, the number of tokens, the cost and whether it succeeded – for cost control, abuse limits (a daily maximum) and quality monitoring. The generated sentence itself is not stored on our servers; it is cached on your device for the day.</li>
+        </ul>
+        <p className="text-fg-2 leading-relaxed mt-3">
+          Legal basis: performance of our contract with you – the Premium subscription or the free preview (Art. 6(1)(b) GDPR) – and our legitimate interest in cost control and abuse prevention (Art. 6(1)(f) GDPR).
+        </p>
       </section>
 
       <section>
@@ -195,6 +207,12 @@ export default function PrivacyContent({ lang }) {
         <p className="text-fg-2 leading-relaxed">
           Map tiles are loaded from OpenStreetMap servers. We query OpenStreetMap data via the Overpass API to estimate road surface roughness along your route; only anonymous bounding-box coordinates are sent — no account or personal data. On the web, the town name for “Weather here” comes from OpenStreetMap Nominatim; only the rounded position (about 1 km) is sent. As with any web request, these services receive your IP address.<br />
           Privacy Policy: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" className="link underline">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a>
+        </p>
+
+        <h3 className="text-xl font-medium mb-2 mt-4">4.11 Anthropic (AI Text Generation)</h3>
+        <p className="text-fg-2 leading-relaxed">
+          Anthropic, PBC (USA) writes the one-sentence ride briefing (Premium and free preview) via its Claude API. It receives only the weather facts described in 2.12 – no personal data. Anthropic does not use API data to train its models. Transfers to the USA are covered by the EU Standard Contractual Clauses.<br />
+          Privacy Policy: <a href="https://www.anthropic.com/legal/privacy" className="link underline">https://www.anthropic.com/legal/privacy</a>
         </p>
 
         <h3 className="text-xl font-medium mb-2 mt-4">4.10 Sunrise-Sunset.org</h3>
@@ -306,6 +324,7 @@ export default function PrivacyContent({ lang }) {
               <tr className="border-b border-line"><td className="py-2 pr-4">Subscription status</td><td className="py-2 pr-4">Premium features</td><td className="py-2">Until account deletion</td></tr>
               <tr className="border-b border-line"><td className="py-2 pr-4">Tour plans &amp; reminder consent</td><td className="py-2 pr-4">Email reminders the evening before a ride</td><td className="py-2">Until deletion / opt-out</td></tr>
               <tr className="border-b border-line"><td className="py-2 pr-4">Current location (optional)</td><td className="py-2 pr-4">“Weather here” on the home screen</td><td className="py-2">Not stored on our servers; town name cached on your device</td></tr>
+              <tr className="border-b border-line"><td className="py-2 pr-4">Briefing tone, AI request log</td><td className="py-2 pr-4">Written ride briefing (Premium), cost control</td><td className="py-2">Tone until account deletion; log entries are anonymised (user ID removed) when the account is deleted</td></tr>
               <tr><td className="py-2 pr-4">Weather requests</td><td className="py-2 pr-4">Rate limiting</td><td className="py-2">1 week</td></tr>
             </tbody>
           </table>
