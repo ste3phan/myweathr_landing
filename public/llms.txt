@@ -9,7 +9,7 @@ Key facts:
 - Free: wind along the route, Tailwind Score and route import for 3 plans per week, coarse route sections.
 - Premium: unlimited plans, finer route sections, Wind Cost (bike type and riding position), best start time, Echelon Analysis (beta), coffee stop planner, nightly Strava sync. USD 3.99/month or 29.99/year; EUR 3.99/month or 29.99/year.
 - Works for road cycling, gravel, MTB, triathlon and trail running (pace in min/km for runners); lap courses are split into laps, each with its own wind.
-- Current app version: 1.5.0 (November 2026). App languages: English, German, French, Italian, Spanish, Dutch. Website languages: English (/en/) and German (/de/).
+- Current app version: 1.6.0 (November 2026). App languages: English, German, French, Italian, Spanish, Dutch. Website languages: English (/en/) and German (/de/).
 
 ## Features
 
