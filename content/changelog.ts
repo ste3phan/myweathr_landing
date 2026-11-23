@@ -3,6 +3,16 @@ type L = { en: string; de: string }
 
 export const versions: { version: string; date: L; items: L[] }[] = [
   {
+    version: '1.7.0',
+    date: { en: 'November 2026', de: 'November 2026' },
+    items: [
+      { en: 'Ride briefing under “Weather here”: will it rain today, and when? When is the best time to ride? Plus warnings for ice, heat and strong gusts – from 6 pm for tomorrow', de: 'Fahr-Briefing unter „Wetter hier“: Regnet es heute und wann? Wann fährst du am besten? Dazu Warnungen vor Glätte, Hitze und starken Böen – ab 18 Uhr für morgen' },
+      { en: 'New with Premium: your briefing talks back – cheeky or matter-of-fact, your call. Try it free for 3 days', de: 'Neu mit Premium: Das Briefing spricht mit dir – frech oder sachlich, du entscheidest. 3 Tage kostenlos zum Ausprobieren' },
+      { en: 'Collapsible briefing with warnings that always stay visible; “Weather here” now also for new users', de: 'Briefing einklappbar, Warnungen bleiben immer sichtbar; „Wetter hier“ jetzt auch für neue Nutzer' },
+      { en: 'Clearer weather card with whole numbers in both metric and imperial, plus a more reliable weather cache', de: 'Übersichtlichere Wetterkarte mit ganzen Zahlen in metrisch und imperial, dazu ein zuverlässigerer Wetter-Zwischenspeicher' },
+    ],
+  },
+  {
     version: '1.6.0',
     date: { en: 'November 2026', de: 'November 2026' },
     items: [
